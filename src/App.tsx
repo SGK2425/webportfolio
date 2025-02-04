@@ -7,23 +7,38 @@ function App() {
       {/* Navigation */}
       <nav className="fixed w-full bg-black/50 backdrop-blur-sm z-50">
         <div className="container mx-auto px-4">
-          <div class="sc-gEvEer dZlZId">
-   <a class="sc-eqUAAy jzFxza" href="/">
-   <a style="display: flex; align-items: center; color: rgb(242, 243, 244); cursor: pointer;">
-      <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 32 32" height="3rem" width="3rem" xmlns="http://www.w3.org/2000/svg">
-         <path d="M13.632 5.289c-0.613 0.129-1.823 0.565-2.662 0.984-1.275 0.613-1.759 0.968-2.921 2.13s-1.517 1.646-2.13 2.921c-1.646 3.373-1.646 6.6 0 10.005 0.613 1.291 0.952 1.759 2.13 2.921 1.178 1.178 1.63 1.501 2.921 2.13 1.969 0.936 2.921 1.162 5.002 1.162s3.034-0.226 5.002-1.162c1.275-0.613 1.727-0.952 2.921-2.13 1.178-1.194 1.517-1.646 2.13-2.921 0.774-1.63 1-2.388 1.178-4.002l0.113-1h-3.195l-0.21 1.243c-1.017 6.471-8.907 9.069-13.587 4.47-3.792-3.712-2.969-10.005 1.678-12.732 0.871-0.516 2.63-1.049 3.437-1.049h0.532v-3.227l-0.597 0.016c-0.339 0-1.113 0.113-1.743 0.242zM14.213 9.645c-3.421 0.92-5.648 4.325-5.067 7.745 0.662 3.792 4.212 6.39 7.891 5.761 3.776-0.645 6.39-4.212 5.761-7.859-0.71-4.115-4.647-6.713-8.585-5.648z"></path>
-      </svg>
-      <div class="sc-fqkvVR bzZDEf">Devfolio</div>
-   </a>
-   </a>
-   <div class="sc-imWYAI bZGvuD">
-      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-         <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
-      </svg>
-   </div>
-   <ul class="sc-dcJsrY jQdOfg"><a href="#about" class="sc-iGgWBj gMmMJZ">About</a><a href="#skills" class="sc-iGgWBj gMmMJZ">Skills</a><a href="#visionary" class="sc-iGgWBj gMmMJZ">Experience</a><a href="#projects" class="sc-iGgWBj gMmMJZ">Projects</a><a href="#education" class="sc-iGgWBj gMmMJZ">Education</a></ul>
-   <div class="sc-kAyceB bKssKc"><a href="https://github.com/navanee1609" target="_blank" class="sc-gsFSXq kCaCEN">Github</a></div>
-</div>
+          <div className="flex justify-between items-center py-4">
+            <a href="#" className="text-2xl font-bold text-blue-500">JD.</a>
+            <div className="hidden md:flex space-x-8">
+              <a href="#home" className="hover:text-blue-500 transition-colors flex items-center gap-2">
+                <Home className="w-4 h-4" />
+                Home
+              </a>
+              <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">
+                <User className="w-4 h-4" />
+                About
+              </a>
+              <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">
+                <Briefcase className="w-4 h-4" />
+                Experience
+              </a>
+              <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">
+                <Code2 className="w-4 h-4" />
+                Projects
+              </a>
+              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                Contact
+              </a>
+            </div>
+            <a 
+              href="#"
+              className="hidden md:flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors"
+            >
+              <FileText className="w-4 h-4" />
+              Resume
+            </a>
+          </div>
         </div>
       </nav>
 
