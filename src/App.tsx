@@ -57,7 +57,7 @@ function App() {
             </div>
             <p className="text-blue-500 text-xl mb-4">Hello, I'm</p>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-              John Doe
+              Settipalli Gopikrishna
             </h1>
             <div className="flex flex-wrap justify-center gap-4 mb-8 text-lg text-gray-300">
               <span className="flex items-center gap-2">
