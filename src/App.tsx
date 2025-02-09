@@ -4,55 +4,55 @@ import { Github, Linkedin, Mail, ExternalLink, Code2, Briefcase, User, ChevronDo
 function App() {
 
   const handleSubmit = (event) => {
-        event.preventDefault();
+    event.preventDefault();
 
-        const formData = new FormData(event.target);
-        const email = formData.get('email');
-        const name = formData.get('name');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
+    const formData = new FormData(event.target);
+    const email = formData.get('email');
+    const name = formData.get('name');
+    const subject = formData.get('subject');
+    const message = formData.get('message');
 
-        fetch('http://localhost:5000/api/send-email', { // Correct URL!
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email, name, subject, message }),
-        })
-            .then(response => {
-                if (!response.ok) { // Check for HTTP errors (4xx or 5xx)
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json(); // If response is ok, parse JSON
-            })
-            .then(data => {
-                console.log('Success:', data);
-                event.target.reset();
-                alert("Message sent successfully!");
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert("Error sending message. Please try again later.");
-            });
-    };
+    fetch('http://localhost:5000/api/send-email', { // Correct URL!
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, name, subject, message }),
+    })
+      .then(response => {
+        if (!response.ok) { // Check for HTTP errors (4xx or 5xx)
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json(); // If response is ok, parse JSON
+      })
+      .then(data => {
+        console.log('Success:', data);
+        event.target.reset();
+        alert("Message sent successfully!");
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert("Error sending message. Please try again later.");
+      });
+  };
 
-  
-  return (    
+
+  return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Navigation */}
       <nav className="fixed w-full bg-black/50 backdrop-blur-sm z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <a href="#" className="text-2xl font-bold text-blue-500">JD</a>
-            <div className="hidden md:flex space-x-8">              
+            <div className="hidden md:flex space-x-8">
               <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">About</a>
               <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
               <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">Experience</a>
               <a href="#education" className="hover:text-blue-500 transition-colors flex items-center gap-2">Education</a>
               <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">Projects</a>
-              <a href="#skills" className="hover:text-blue-500 transition-colors flex items-center gap-2">Skills</a> 
+              <a href="#skills" className="hover:text-blue-500 transition-colors flex items-center gap-2">Skills</a>
             </div>
-            <a 
+            <a
               href="#"
               className="hidden md:flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors"
             >
@@ -63,63 +63,63 @@ function App() {
         </div>
       </nav>
 
-    {/* Hero Section (Home) - Updated with Text Introduction */}
-            <header id="about" className="min-h-screen flex items-center justify-center pt-20 relative">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] opacity-10 bg-cover bg-center"></div>
-                <div className="container mx-auto px-4 relative">
-                    <div className="max-w-5xl mx-auto text-center">
+      {/* Hero Section (Home) - Updated with Text Introduction */}
+      <header id="about" className="min-h-screen flex items-center justify-center pt-20 relative">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] opacity-10 bg-cover bg-center"></div>
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-5xl mx-auto text-center">
 
-                        {/* Split Content (Image and Text) */}
-                        <div className="flex flex-col md:flex-row items-center justify-center">
-                            <div id="Left" className="md:w-1/2 pr-4 items-center justify-center">
-                              <p className="text-left text-4xl md:text-4xl font-bold mb-6">Hello, I'm</p>
-                              <p className="text-left text-4xl md:text-4xl font-bold mb-6">
-                                    Settipalli Gopikrishna 
-                                </p>                                
-                                    <h2 className="text-left text-4xl md:text-4xl font-bold mb-6">
-            I am a <span className="text-3xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Automation Testing</span>
-          </h2> 
-                               
+            {/* Split Content (Image and Text) */}
+            <div className="flex flex-col md:flex-row items-center justify-center">
+              <div id="Left" className="md:w-1/2 pr-4 items-center justify-center">
+                <p className="text-left text-4xl md:text-4xl font-bold mb-6">Hello, I'm</p>
+                <p className="text-left text-4xl md:text-4xl font-bold mb-6">
+                  Settipalli Gopikrishna
+                </p>
+                <h2 className="text-left text-4xl md:text-4xl font-bold mb-6">
+                  I am a <span className="text-3xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Automation Testing</span>
+                </h2>
 
-                                {/* Introduction Text (like in the image) */}
-                                <div className="text-left md:text-left text-gray-300 leading-relaxed">
-                                    <p>A skilled automation tester with a strong portfolio of test scripts demonstrating proficiency in Selenium, Appium, and API testing. Passionate about staying current with the latest automation testing frameworks and methodologies, Thrives in dynamic teams, contributing creative solutions for test automation challenges and exploring innovative approaches to improve test coverage and reduce testing time.</p>
 
-                                    <div className="flex flex-wrap gap-4 justify-start mt-4"> {/* Align buttons to the left */}
-                                        <a href="#contact" type="submit" className="px-8 py-3 bg-blue-600 rounded-full hover:bg-blue-700 transition-all transform hover:scale-105">
-                                            Check Resume
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                {/* Introduction Text (like in the image) */}
+                <div className="text-left md:text-left text-gray-300 leading-relaxed">
+                  <p>A skilled automation tester with a strong portfolio of test scripts demonstrating proficiency in Selenium, Appium, and API testing. Passionate about staying current with the latest automation testing frameworks and methodologies, Thrives in dynamic teams, contributing creative solutions for test automation challenges and exploring innovative approaches to improve test coverage and reduce testing time.</p>
 
-<div id="Right" className="md:w-1/2 pr-4 mt-8 md:mt-0 flex justify-center">
-    <div className="mb-8 relative">
-        <div className="rounded-full overflow-hidden w-[27rem] h-[27rem] border-4 border-blue-500"> {/* Increased size using rem units */}
-            <img
-                src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-                alt="Profile"
-                className="w-full h-full object-cover"
-            />
-        </div>
-        <div className="absolute inset-0 rounded-full border-4 border-blue-500 animate-pulse pointer-events-none"></div>
-    </div>
-</div>
-                          
-                        </div>
-
-                    </div>
+                  <div className="flex flex-wrap gap-4 justify-start mt-4"> {/* Align buttons to the left */}
+                    <a href="#contact" type="submit" className="bg-blue-600 rounded-full hover:bg-blue-700 transition-all transform hover:scale-105">
+                      Check Resume
+                    </a>
+                  </div>
                 </div>
-               
-            </header>
+              </div>
 
-     
-          
-    {/* Skill Section */}
-     <section className="py-20 relative" id="skill">
-       <div className="container mx-auto px-4">
+              <div id="Right" className="md:w-1/2 pr-4 mt-8 md:mt-0 flex justify-center">
+                <div className="mb-8 relative">
+                  <div className="rounded-full overflow-hidden w-[27rem] h-[27rem] border-4 border-blue-500"> {/* Increased size using rem units */}
+                    <img
+                      src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                      alt="Profile"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute inset-0 rounded-full border-4 border-blue-500 animate-pulse pointer-events-none"></div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </header>
+
+
+
+      {/* Skill Section */}
+      <section className="py-20 relative" id="skill">
+        <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-16 text-center">Skills</h2>
-         <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-blue-500/20">
                 <h3 className="text-2xl font-semibold mb-6 text-blue-400">Frontend Skills</h3>
@@ -129,7 +129,7 @@ function App() {
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                       <span className="text-gray-300">{skill}</span>
                       <div className="flex-1 h-2 bg-gray-700 rounded-full ml-2">
-                        <div className="h-full bg-blue-500 rounded-full" style={{ width: `${Math.random() * 30 + 70}%`                           }}></div>
+                        <div className="h-full bg-blue-500 rounded-full" style={{ width: `${Math.random() * 30 + 70}%` }}></div>
                       </div>
                     </div>
                   ))}
@@ -148,8 +148,8 @@ function App() {
                     </div>
                   ))}
                 </div>
-                </div>
-          </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -164,7 +164,7 @@ function App() {
             {[
               {
                 company: 'EY Technology Solutions',
-                role: 'Senior Full Stack Developer',
+                role: 'Associate Test Manager',
                 period: 'SEP 2021 - Present',
                 description: [
                   'Led development of multiple high-impact projects',
@@ -192,7 +192,7 @@ function App() {
                   'Worked with agile methodologies in a fast-paced environment'
                 ]
               },
-             {
+              {
                 company: 'Payoda Technology Inc',
                 role: 'Senior Test Engineer',
                 period: 'DEC 2014 - NOV 2017',
@@ -317,28 +317,42 @@ function App() {
           <h2 className="text-4xl font-bold mb-16 text-center">
             Get In <span className="text-blue-500">Education</span>
           </h2>
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-gray-300 mb-12 text-lg">
-              I'm currently open to new opportunities and collaborations. Feel free to reach out if you'd
-              like to discuss potential projects or just want to connect!
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="p-6 bg-black/50 backdrop-blur-sm rounded-xl border border-blue-500/20 hover:border-blue-500 transition-colors">
-                <Mail className="w-8 h-8 text-blue-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Email</h3>
-                <a href="mailto:john@example.com" className="text-gray-400 hover:text-blue-400">john@example.com</a>
+          <div className="max-w-4xl mx-auto space-y-8">
+            {[
+              {
+                institution: 'Prathyusha Engineering College',
+                university: 'Anna University, Tamil Nadu',
+                degree: 'Bachelor of Engineering - Electronics and Communication Engineering',
+                period: '2008-2013',
+                grade: '62.8 CGPA', // Or description if not a grade
+                description: "As a Electronics and Communication Engineering graduate, I possess strong problem-solving and precision skills. Combining this foundation with my passion for technology, I'm venturing into IT. My college experience has equipped me to bridge the worlds of engineering and IT, applying efficiency and innovation to both realms, making me a versatile and adaptable professional."
+              },
+              {
+                institution: 'Sree Bharathi Junior collage',
+                university: 'Board of Intermediate Education, Andhra Pradesh',
+                degree: 'MPC (Mathematics, Physics and Chemistry)',
+                period: '2006-2008', // Add period if available
+                grade: '74.80', // Or description if not a grade
+                description: "I've embraced a dynamic academic journey. My studies have fostered critical thinking and a thirst for knowledge. Through my dedication and adaptability, I've honed essential skills that transcend disciplines, preparing me for future challenges and opportunities." // Add description if available
+              },
+              {
+                institution: 'VISWAM HIGH SCHOOL',
+                university: 'Board Of Secondary Education, Andhra Pradesh',
+                degree: 'SSC - Xth',
+                period: '2005-2006', // Add period if available
+                grade: '67.10', // Or description if not a grade
+                description: "I embarked on my educational journey with enthusiasm. This pivotal year instilled a strong foundation in essential subjects and time management. It was a crucial step toward my academic and personal development, preparing me for the road ahead" // Add description if available
+              },
+            ].map((edu, index) => (
+              <div key={index} className="p-8 bg-black/50 backdrop-blur-sm rounded-xl border border-blue-500/20 hover:border-blue-500 transition-colors">
+                <h3 className="text-3xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">{edu.institution}</h3>
+                <h4 className="text-xl font-semibold mt-3 text-blue-500">University : {edu.university}</h4>
+                <h6 className="text-xl font-semibold mt-3">{edu.degree}</h6>
+                <p className="text-gray-400 mt-2">Period : {edu.period}</p>
+                {edu.grade && <p className="text-gray-300 mt-2">Grade : {edu.grade}</p>} {/* Conditionally render grade */}
+                <p className="text-gray-300 mt-4">{edu.description}</p>
               </div>
-              <div className="p-6 bg-black/50 backdrop-blur-sm rounded-xl border border-blue-500/20 hover:border-blue-500 transition-colors">
-                <Linkedin className="w-8 h-8 text-blue-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">LinkedIn</h3>
-                <a href="#" className="text-gray-400 hover:text-blue-400">@johndoe</a>
-              </div>
-              <div className="p-6 bg-black/50 backdrop-blur-sm rounded-xl border border-blue-500/20 hover:border-blue-500 transition-colors">
-                <Github className="w-8 h-8 text-blue-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">GitHub</h3>
-                <a href="#" className="text-gray-400 hover:text-blue-400">@johndoe</a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -347,7 +361,7 @@ function App() {
       <section className="py-20 relative" id="contact">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-16 text-center">
-            <span className="text-blue-500">Contact</span>
+            Contact <span className="text-blue-500">Me</span>
           </h2>
           <p className="text-gray-300 mb-12 text-lg text-center"> {/* Centered paragraph */}
             Feel free to reach out to me for any questions or opportunities!
@@ -368,22 +382,22 @@ function App() {
               </div>
 
               <div className="mb-6">
-                <textarea id="message" name="message" rows="5" placeholder="Message" className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
-              </div>             
+                <textarea id="message" name="message" placeholder="Message" className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+              </div>
 
-            <form onSubmit={handleSubmit}> {/* Add onSubmit handler */}
-            {/* ... form fields (with placeholders) ... */}
-            <button type="submit">Send</button>
-          </form>
-              
+              <form onSubmit={handleSubmit}> {/* Add onSubmit handler */}
+                {/* ... form fields (with placeholders) ... */}
+                <button type="submit">Send</button>
+              </form>
+
             </form>
-            
+
           </div>
-        </div>     
-       
-        
+        </div>
+
+
       </section>
-      
+
 
       {/* Footer */}
       <footer className="py-5 border-t border-gray-800">
@@ -391,17 +405,17 @@ function App() {
           <h2 className="text-3xl font-bold mb-43 text-center">
             <span className="text-white-500">Settipalli Gopikrishna</span>
           </h2>
-          <div className="flex items-center justify-center py-5">          
+          <div className="flex items-center justify-center py-5">
             <nav className="hidden md:flex items-center justify-center space-x-8">
               <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">About</a>
               <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
               <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">Experience</a>
               <a href="#education" className="hover:text-blue-500 transition-colors flex items-center gap-2">Education</a>
               <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">Projects</a>
-              <a href="#skills" className="hover:text-blue-500 transition-colors flex items-center gap-2">Skills</a> 
+              <a href="#skills" className="hover:text-blue-500 transition-colors flex items-center gap-2">Skills</a>
             </nav>
-          </div>          
-          
+          </div>
+
           <p className="text-gray-400">
             © {new Date().getFullYear()} Elevating the Digital Experience!{' '}
             <span className="text-blue-500">❤</span> using Automation Testing
