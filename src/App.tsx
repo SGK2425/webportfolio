@@ -44,26 +44,13 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <a href="#" className="text-2xl font-bold text-blue-500">JD</a>
-            <div className="hidden md:flex space-x-8">
-              
-              <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">
-                About
-              </a>
-              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">
-                Education
-              </a>
-              <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">
-                Experience
-              </a>
-              <a href="#skill" className="hover:text-blue-500 transition-colors flex items-center gap-2">
-                Skill
-              </a>
-              <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">
-                Projects
-              </a>              
-              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">
-                Contact
-              </a>
+            <div className="hidden md:flex space-x-8">              
+              <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">About</a>
+              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
+              <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">Experience</a>
+              <a href="#education" className="hover:text-blue-500 transition-colors flex items-center gap-2">Education</a>
+              <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">Projects</a>
+              <a href="#skills" className="hover:text-blue-500 transition-colors flex items-center gap-2">Skills</a> 
             </div>
             <a 
               href="#"
@@ -80,7 +67,7 @@ function App() {
             <header id="about" className="min-h-screen flex items-center justify-center pt-20 relative">
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] opacity-10 bg-cover bg-center"></div>
                 <div className="container mx-auto px-4 relative">
-                    <div className="max-w-4xl mx-auto text-center">
+                    <div className="max-w-5xl mx-auto text-center">
 
                         {/* Split Content (Image and Text) */}
                         <div className="flex flex-col md:flex-row items-center justify-center">
@@ -88,14 +75,15 @@ function App() {
                               <p className="text-left text-4xl md:text-4xl font-bold mb-6">Hello, I'm</p>
                               <p className="text-left text-4xl md:text-4xl font-bold mb-6">
                                     Settipalli Gopikrishna 
-                                </p>
-                                <h1 className="text-5xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-                                    Automation Testing
-                                </h1>
+                                </p>                                
+                                    <h2 className="text-left text-4xl md:text-4xl font-bold mb-6">
+            I am a <span className="text-3xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Automation Testing</span>
+          </h2> 
+                               
 
                                 {/* Introduction Text (like in the image) */}
                                 <div className="text-left md:text-left text-gray-300 leading-relaxed">
-                                    <p>A skilled React developer with a strong portfolio, passionate about staying updated on frontend tech. Collaborative and committed to quality, I thrive in dynamic teams. Eager to contribute creativity and bring innovative ideas to life.</p>
+                                    <p>A skilled automation tester with a strong portfolio of test scripts demonstrating proficiency in Selenium, Appium, and API testing. Passionate about staying current with the latest automation testing frameworks and methodologies, Thrives in dynamic teams, contributing creative solutions for test automation challenges and exploring innovative approaches to improve test coverage and reduce testing time.</p>
 
                                     <div className="flex flex-wrap gap-4 justify-start mt-4"> {/* Align buttons to the left */}
                                         <a href="#contact" type="submit" className="px-8 py-3 bg-blue-600 rounded-full hover:bg-blue-700 transition-all transform hover:scale-105">
@@ -392,8 +380,7 @@ function App() {
             
           </div>
         </div>     
-
-        
+       
         
       </section>
       
@@ -405,16 +392,15 @@ function App() {
             <span className="text-white-500">Settipalli Gopikrishna</span>
           </h2>
           <div className="flex items-center justify-center py-5">          
-            <nav class="hidden md:flex items-center justify-center space-x-8">
+            <nav className="hidden md:flex items-center justify-center space-x-8">
               <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">About</a>
+              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
               <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">Experience</a>
               <a href="#education" className="hover:text-blue-500 transition-colors flex items-center gap-2">Education</a>
-              <a href="#skills" className="hover:text-blue-500 transition-colors flex items-center gap-2">Skills</a>              
               <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">Projects</a>
-              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
+              <a href="#skills" className="hover:text-blue-500 transition-colors flex items-center gap-2">Skills</a> 
             </nav>
-          </div>
-          
+          </div>          
           
           <p className="text-gray-400">
             © {new Date().getFullYear()} Elevating the Digital Experience!{' '}
