@@ -42,7 +42,7 @@ function App() {
       <nav className="fixed w-full bg-black/50 backdrop-blur-sm z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
-            <a href="#" className="text-2xl font-bold text-blue-500">SG</a>
+            <a href="#" className="text-2xl font-bold text-blue-500">JD</a>
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">About</a>
               <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
@@ -343,7 +343,7 @@ function App() {
           </div>
         </div>
       </section>
-      
+
 
       {/* Contact Section */}
       <section className="py-20 relative" id="contact">
@@ -387,7 +387,7 @@ function App() {
           <h2 className="text-3xl font-bold mb-4 text-center">
             <span className="text-white">Settipalli Gopikrishna</span>
           </h2>
-          <div className="flex items-center justify-center py-5">
+          <div className="flex items-center justify-center py-4">
             <nav className="hidden md:flex items-center justify-center space-x-8">
               <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">About</a>
               <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
@@ -398,7 +398,7 @@ function App() {
             </nav>
           </div>
 
-          <div className="flex items-center justify-center mt-4">
+          <div className="flex items-center justify-center py-4">
             <a href="tel:+91-9444344416" target="_blank" rel="noopener noreferrer" aria-label="Phone" className="mx-2 text-gray-400 hover:text-blue-500">
               <Phone className="w-6 h-6" />
             </a>
@@ -408,15 +408,23 @@ function App() {
             <a href="https://www.linkedin.com/in/gopikrishna-settipalli-sgk2425/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="mx-2 text-gray-400 hover:text-blue-500">
               <Linkedin className="w-6 h-6" />
             </a>
+                      
+            <a href="//wa.me/919444344416" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp" className="mx-2 text-gray-400 hover:text-blue-500">
+              <Whatsapp className="w-6 h-6" />              
+            </a>
+            
+            <a href="https://www.instagram.com/sgk2425" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="mx-2 text-gray-400 hover:text-blue-500">
+              <Instagram className="w-6 h-6" /> {/* Use your Instagram icon component */}
+            </a>
+            <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer" aria-label="X" className="mx-2 text-gray-400 hover:text-blue-500">
+              <Twitter className="w-6 h-6" /> {/* Use your Instagram icon component */}
+            </a>
             <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="mx-2 text-gray-400 hover:text-blue-500">
               <Github className="w-6 h-6" />
             </a>
-            <a href="https://www.instagram.com/sgk2425" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="mx-2 text-gray-400 hover:text-blue-500">
-    <Instagram className="w-6 h-6" /> {/* Use your Instagram icon component */}
-  </a>
-  
+
           </div>
-    
+
           <p className="text-gray-400 mt-4">
             © {new Date().getFullYear()} Elevating the Digital Experience!{' '}
             <span className="text-blue-500">❤</span> using Automation Testing
