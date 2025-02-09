@@ -2,32 +2,66 @@ import React from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code2, Briefcase, User, ChevronDown, Globe, Twitter, Home, FileText, Phone } from 'lucide-react';
 
 function App() {
-  return (
+
+  const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const email = formData.get('email');
+        const name = formData.get('name');
+        const subject = formData.get('subject');
+        const message = formData.get('message');
+
+        fetch('http://localhost:5000/api/send-email', { // Correct URL!
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, name, subject, message }),
+        })
+            .then(response => {
+                if (!response.ok) { // Check for HTTP errors (4xx or 5xx)
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json(); // If response is ok, parse JSON
+            })
+            .then(data => {
+                console.log('Success:', data);
+                event.target.reset();
+                alert("Message sent successfully!");
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("Error sending message. Please try again later.");
+            });
+    };
+
+  
+  return (    
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Navigation */}
       <nav className="fixed w-full bg-black/50 backdrop-blur-sm z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
-            <a href="#" className="text-2xl font-bold text-blue-500">JD.</a>
+            <a href="#" className="text-2xl font-bold text-blue-500">JD</a>
             <div className="hidden md:flex space-x-8">
-              <a href="#home" className="hover:text-blue-500 transition-colors flex items-center gap-2">
-                <Home className="w-4 h-4" />
-                Home
-              </a>
+              
               <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">
-                <User className="w-4 h-4" />
                 About
               </a>
+              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">
+                Education
+              </a>
               <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">
-                <Briefcase className="w-4 h-4" />
                 Experience
               </a>
-              <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">
-                <Code2 className="w-4 h-4" />
-                Projects
+              <a href="#skill" className="hover:text-blue-500 transition-colors flex items-center gap-2">
+                Skill
               </a>
+              <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">
+                Projects
+              </a>              
               <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">
-                <Phone className="w-4 h-4" />
                 Contact
               </a>
             </div>
@@ -36,91 +70,68 @@ function App() {
               className="hidden md:flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors"
             >
               <FileText className="w-4 h-4" />
-              Resume
+              GIT
             </a>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <header id="home" className="min-h-screen flex items-center justify-center pt-20 relative">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] opacity-10 bg-cover bg-center"></div>
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-8 relative">
-              <img
+    {/* Hero Section (Home) - Updated with Text Introduction */}
+            <header id="about" className="min-h-screen flex items-center justify-center pt-20 relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] opacity-10 bg-cover bg-center"></div>
+                <div className="container mx-auto px-4 relative">
+                    <div className="max-w-4xl mx-auto text-center">
+
+                        {/* Split Content (Image and Text) */}
+                        <div className="flex flex-col md:flex-row items-center justify-center">
+                            <div id="Left" className="md:w-1/2 pr-4 items-center justify-center">
+                              <p className="text-left text-4xl md:text-4xl font-bold mb-6">Hello, I'm</p>
+                              <p className="text-left text-4xl md:text-4xl font-bold mb-6">
+                                    Settipalli Gopikrishna 
+                                </p>
+                                <h1 className="text-5xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                                    Automation Testing
+                                </h1>
+
+                                {/* Introduction Text (like in the image) */}
+                                <div className="text-left md:text-left text-gray-300 leading-relaxed">
+                                    <p>A skilled React developer with a strong portfolio, passionate about staying updated on frontend tech. Collaborative and committed to quality, I thrive in dynamic teams. Eager to contribute creativity and bring innovative ideas to life.</p>
+
+                                    <div className="flex flex-wrap gap-4 justify-start mt-4"> {/* Align buttons to the left */}
+                                        <a href="#contact" type="submit" className="px-8 py-3 bg-blue-600 rounded-full hover:bg-blue-700 transition-all transform hover:scale-105">
+                                            Check Resume
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+<div id="Right" className="md:w-1/2 pr-4 mt-8 md:mt-0 flex justify-center">
+    <div className="mb-8 relative">
+        <div className="rounded-full overflow-hidden w-[27rem] h-[27rem] border-4 border-blue-500"> {/* Increased size using rem units */}
+            <img
                 src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                 alt="Profile"
-                className="w-40 h-40 rounded-full mx-auto border-4 border-blue-500 p-1"
-              />
-              <div className="absolute inset-0 rounded-full border-4 border-blue-500 animate-pulse"></div>
-            </div>
-            <p className="text-blue-500 text-xl mb-4">Hello, I'm</p>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-              Settipalli Gopikrishna
-            </h1>
-            <div className="flex flex-wrap justify-center gap-4 mb-8 text-lg text-gray-300">
-              <span className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                Full Stack Developer
-              </span>
-              <span className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                Open Source Enthusiast
-              </span>
-              <span className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                Tech Writer
-              </span>
-            </div>
-            <div className="flex gap-6 justify-center mb-12">
-              <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors transform hover:scale-110">
-                <Github className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors transform hover:scale-110">
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors transform hover:scale-110">
-                <Twitter className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors transform hover:scale-110">
-                <Globe className="w-6 h-6" />
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <a
-                href="#contact"
-                className="px-8 py-3 bg-blue-600 rounded-full hover:bg-blue-700 transition-all transform hover:scale-105"
-              >
-                Hire Me
-              </a>
-              <a
-                href="#projects"
-                className="px-8 py-3 border-2 border-blue-500 text-blue-400 rounded-full hover:bg-blue-500 hover:text-white transition-all transform hover:scale-105"
-              >
-                View Portfolio
-              </a>
-            </div>
-          </div>
+                className="w-full h-full object-cover"
+            />
         </div>
-        <div className="absolute bottom-10 animate-bounce">
-          <ChevronDown className="w-6 h-6 text-blue-500" />
-        </div>
-      </header>
+        <div className="absolute inset-0 rounded-full border-4 border-blue-500 animate-pulse pointer-events-none"></div>
+    </div>
+</div>
+                          
+                        </div>
 
-      {/* About Section */}
-      <section className="py-20 relative" id="about">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-16 text-center">
-            About <span className="text-blue-500">Me</span>
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-gray-300 text-lg leading-relaxed mb-12">
-              I'm a passionate Full Stack Developer with 5+ years of experience in building web applications.
-              I specialize in JavaScript/TypeScript and have professional experience working with React, Node.js,
-              and cloud technologies. I love creating elegant solutions to complex problems and sharing my knowledge
-              with the developer community.
-            </p>
+                    </div>
+                </div>
+               
+            </header>
+
+     
+          
+    {/* Skill Section */}
+     <section className="py-20 relative" id="skill">
+       <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-16 text-center">Skills</h2>
+         <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-blue-500/20">
                 <h3 className="text-2xl font-semibold mb-6 text-blue-400">Frontend Skills</h3>
@@ -130,7 +141,7 @@ function App() {
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                       <span className="text-gray-300">{skill}</span>
                       <div className="flex-1 h-2 bg-gray-700 rounded-full ml-2">
-                        <div className="h-full bg-blue-500 rounded-full" style={{ width: `${Math.random() * 30 + 70}%` }}></div>
+                        <div className="h-full bg-blue-500 rounded-full" style={{ width: `${Math.random() * 30 + 70}%`                           }}></div>
                       </div>
                     </div>
                   ))}
@@ -149,8 +160,8 @@ function App() {
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
+                </div>
+          </div>
           </div>
         </div>
       </section>
@@ -164,9 +175,9 @@ function App() {
           <div className="max-w-4xl mx-auto space-y-8">
             {[
               {
-                company: 'Tech Corp',
+                company: 'EY Technology Solutions',
                 role: 'Senior Full Stack Developer',
-                period: '2020 - Present',
+                period: 'SEP 2021 - Present',
                 description: [
                   'Led development of multiple high-impact projects',
                   'Mentored junior developers and conducted code reviews',
@@ -174,9 +185,39 @@ function App() {
                 ]
               },
               {
-                company: 'StartUp Inc',
-                role: 'Full Stack Developer',
-                period: '2018 - 2020',
+                company: 'HCL Technologies',
+                role: 'Test Lead',
+                period: 'DEC 2019 - SEP 2021',
+                description: [
+                  'Developed and maintained various web applications',
+                  'Implemented responsive designs and improved UX',
+                  'Worked with agile methodologies in a fast-paced environment'
+                ]
+              },
+              {
+                company: 'Hexaware Technologies',
+                role: 'System Analyst',
+                period: 'JAN 2018 - DEC 2019',
+                description: [
+                  'Developed and maintained various web applications',
+                  'Implemented responsive designs and improved UX',
+                  'Worked with agile methodologies in a fast-paced environment'
+                ]
+              },
+             {
+                company: 'Payoda Technology Inc',
+                role: 'Senior Test Engineer',
+                period: 'DEC 2014 - NOV 2017',
+                description: [
+                  'Developed and maintained various web applications',
+                  'Implemented responsive designs and improved UX',
+                  'Worked with agile methodologies in a fast-paced environment'
+                ]
+              },
+              {
+                company: 'Iframes Technologies',
+                role: 'Software Developer',
+                period: 'Jan 2013 - DEC 2014',
                 description: [
                   'Developed and maintained various web applications',
                   'Implemented responsive designs and improved UX',
@@ -282,11 +323,11 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 relative" id="contact">
+      {/* Education Section */}
+      <section className="py-20 relative" id="education">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-16 text-center">
-            Get In <span className="text-blue-500">Touch</span>
+            Get In <span className="text-blue-500">Education</span>
           </h2>
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gray-300 mb-12 text-lg">
@@ -314,12 +355,70 @@ function App() {
         </div>
       </section>
 
+      {/* Contact Section - Updated for form */}
+      <section className="py-20 relative" id="contact">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-16 text-center">
+            <span className="text-blue-500">Contact</span>
+          </h2>
+          <p className="text-gray-300 mb-12 text-lg text-center"> {/* Centered paragraph */}
+            Feel free to reach out to me for any questions or opportunities!
+          </p>
+
+          <div className="max-w-xl mx-auto bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-blue-500/20 hover:border-blue-500 transition-colors"> {/* Form container */}
+            <form>
+              <div className="mb-4">
+                <input type="email" id="email" name="email" placeholder="Your Email" required className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+
+              <div className="mb-4">
+                <input type="text" id="name" name="name" placeholder="Your Name" required className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+
+              <div className="mb-4">
+                <input type="text" id="subject" name="subject" placeholder="Subject" className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+
+              <div className="mb-6">
+                <textarea id="message" name="message" rows="5" placeholder="Message" className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+              </div>             
+
+            <form onSubmit={handleSubmit}> {/* Add onSubmit handler */}
+            {/* ... form fields (with placeholders) ... */}
+            <button type="submit">Send</button>
+          </form>
+              
+            </form>
+            
+          </div>
+        </div>     
+
+        
+        
+      </section>
+      
+
       {/* Footer */}
-      <footer className="py-8 border-t border-gray-800">
+      <footer className="py-5 border-t border-gray-800">
         <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-43 text-center">
+            <span className="text-white-500">Settipalli Gopikrishna</span>
+          </h2>
+          <div className="flex items-center justify-center py-5">          
+            <nav class="hidden md:flex items-center justify-center space-x-8">
+              <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">About</a>
+              <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">Experience</a>
+              <a href="#education" className="hover:text-blue-500 transition-colors flex items-center gap-2">Education</a>
+              <a href="#skills" className="hover:text-blue-500 transition-colors flex items-center gap-2">Skills</a>              
+              <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">Projects</a>
+              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
+            </nav>
+          </div>
+          
+          
           <p className="text-gray-400">
-            © {new Date().getFullYear()} John Doe. Built with{' '}
-            <span className="text-blue-500">❤</span> using React & Tailwind CSS
+            © {new Date().getFullYear()} Elevating the Digital Experience!{' '}
+            <span className="text-blue-500">❤</span> using Automation Testing
           </p>
         </div>
       </footer>
