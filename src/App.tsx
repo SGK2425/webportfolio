@@ -90,7 +90,7 @@ function App() {
                   <div className="rounded-full overflow-hidden w-[27rem] h-[27rem] border-4 border-blue-500">
                     <img
                       src="./src/MyProfile4.jpg"
-                      alt="Profile"
+                      alt="MyProfile"
                       className="w-full h-full object-cover"
                     />
                   </div>
