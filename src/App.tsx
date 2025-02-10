@@ -89,7 +89,7 @@ function App() {
                 <div className="mb-8 relative">
                   <div className="rounded-full overflow-hidden w-[27rem] h-[27rem] border-4 border-blue-500">
                     <img
-                      src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                      src="./src/MyProfile4.jpg"
                       alt="Profile"
                       className="w-full h-full object-cover"
                     />
