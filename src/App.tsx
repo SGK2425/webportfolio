@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code2, Briefcase, User, ChevronDown, Globe, Twitter, Home, FileText, Phone, Instagram } from 'lucide-react';
-import Whatsapp from './Whatsapp'; // If using custom SVG
+import Whatsapp from './Whatsapp';
+import Typewriter from 'typewriter-effect';
 
 function App() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -77,7 +78,7 @@ function App() {
                   I am a <span className="text-3xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Automation Testing</span>
                 </h2>
                 <div className="text-left md:text-left text-gray-300 leading-relaxed">
-                  <p>A skilled automation tester with a strong portfolio of test scripts demonstrating proficiency in Selenium, Appium, and API testing. Passionate about staying current with the latest automation testing frameworks and methodologies, Thrives in dynamic teams, contributing creative solutions for test automation challenges and exploring innovative approaches to improve test coverage and reduce testing time.</p>
+                  <p>A skilled Automation Architect Engineer with a strong portfolio of Framework development and test scripts demonstrating proficiency in Selenium, Appium, and API testing. Passionate about staying current with the latest automation testing frameworks and methodologies, Thrives in dynamic teams, contributing creative solutions for test automation challenges and exploring innovative approaches to improve test coverage and reduce testing time.</p>
                   <div className="flex flex-wrap gap-4 justify-start mt-4">
                     <a href="#contact" className="bg-blue-600 rounded-full hover:bg-blue-700 transition-all transform hover:scale-105 px-4 py-2">
                       Check Resume
@@ -89,8 +90,8 @@ function App() {
                 <div className="mb-8 relative">
                   <div className="rounded-full overflow-hidden w-[27rem] h-[27rem] border-4 border-blue-500">
                     <img
-                      src="./src/img/temp.png"
-                      alt="MyProfile"
+                      src="https://res.cloudinary.com/do3edwdc3/image/upload/v1/MyProfile4_lo5i6o"
+                      alt="Profile"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -105,7 +106,8 @@ function App() {
       {/* Skill Section */}
       <section className="py-20 relative" id="skills">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-16 text-center">Skills</h2>
+          <h2 className="text-4xl font-bold mb-16 text-center"> My Key <span className="text-blue-500">Skills & Expertise </span>
+ </h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-blue-500/20">
@@ -311,24 +313,24 @@ function App() {
                 university: 'Anna University, Tamil Nadu',
                 degree: 'Bachelor of Engineering - Electronics and Communication Engineering',
                 period: '2008-2013',
-                grade: '62.8 CGPA', // Or description if not a grade
+                grade: '62.8 CGPA',
                 description: "As a Electronics and Communication Engineering graduate, I possess strong problem-solving and precision skills. Combining this foundation with my passion for technology, I'm venturing into IT. My college experience has equipped me to bridge the worlds of engineering and IT, applying efficiency and innovation to both realms, making me a versatile and adaptable professional."
               },
               {
                 institution: 'Sree Bharathi Junior collage',
                 university: 'Board of Intermediate Education, Andhra Pradesh',
                 degree: 'MPC (Mathematics, Physics and Chemistry)',
-                period: '2006-2008', // Add period if available
-                grade: '74.80', // Or description if not a grade
-                description: "I've embraced a dynamic academic journey. My studies have fostered critical thinking and a thirst for knowledge. Through my dedication and adaptability, I've honed essential skills that transcend disciplines, preparing me for future challenges and opportunities." // Add description if available
+                period: '2006-2008',
+                grade: '74.80',
+                description: "I've embraced a dynamic academic journey. My studies have fostered critical thinking and a thirst for knowledge. Through my dedication and adaptability, I've honed essential skills that transcend disciplines, preparing me for future challenges and opportunities."
               },
               {
                 institution: 'VISWAM HIGH SCHOOL',
                 university: 'Board Of Secondary Education, Andhra Pradesh',
                 degree: 'SSC - Xth',
-                period: '2005-2006', // Add period if available
-                grade: '67.10', // Or description if not a grade
-                description: "I embarked on my educational journey with enthusiasm. This pivotal year instilled a strong foundation in essential subjects and time management. It was a crucial step toward my academic and personal development, preparing me for the road ahead" // Add description if available
+                period: '2005-2006',
+                grade: '67.10',
+                description: "I embarked on my educational journey with enthusiasm. This pivotal year instilled a strong foundation in essential subjects and time management. It was a crucial step toward my academic and personal development, preparing me for the road ahead"
               },
             ].map((edu, index) => (
               <div key={index} className="p-8 bg-black/50 backdrop-blur-sm rounded-xl border border-blue-500/20 hover:border-blue-500 transition-colors">
@@ -336,14 +338,13 @@ function App() {
                 <h4 className="text-xl font-semibold mt-3 text-blue-500">University : {edu.university}</h4>
                 <h6 className="text-xl font-semibold mt-3">{edu.degree}</h6>
                 <p className="text-gray-400 mt-2">Period : {edu.period}</p>
-                {edu.grade && <p className="text-gray-300 mt-2">Grade : {edu.grade}</p>} {/* Conditionally render grade */}
+                {edu.grade && <p className="text-gray-300 mt-2">Grade : {edu.grade}</p>}
                 <p className="text-gray-300 mt-4">{edu.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
 
       {/* Contact Section */}
       <section className="py-20 relative" id="contact">
@@ -414,10 +415,10 @@ function App() {
             </a>
             
             <a href="https://www.instagram.com/sgk2425" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="mx-2 text-gray-400 hover:text-blue-500">
-              <Instagram className="w-6 h-6" /> {/* Use your Instagram icon component */}
+              <Instagram className="w-6 h-6" />
             </a>
             <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer" aria-label="X" className="mx-2 text-gray-400 hover:text-blue-500">
-              <Twitter className="w-6 h-6" /> {/* Use your Instagram icon component */}
+              <Twitter className="w-6 h-6" />
             </a>
             <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="mx-2 text-gray-400 hover:text-blue-500">
               <Github className="w-6 h-6" />
