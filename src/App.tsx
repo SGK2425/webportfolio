@@ -1,9 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code2, Briefcase, User, ChevronDown, Globe, Twitter, Home, FileText, Phone, Instagram } from 'lucide-react';
 import Whatsapp from './Whatsapp';
-import Typewriter from 'typewriter-effect';
+import Typed from 'typed.js';
 
 function App() {
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["Frontend Automation", "Backend Automation", "Mobile Automation", "Macros Automation"],
+      typeSpeed: 150,
+      backSpeed: 150,
+      loop: true
+    });
+
+    return () => {
+      typed.destroy(); // Cleanup on component unmount
+    };
+  }, []);
+  
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -75,7 +90,7 @@ function App() {
                   Settipalli Gopikrishna
                 </p>
                 <h2 className="text-left text-4xl md:text-4xl font-bold mb-6">
-                  I am a <span className="text-3xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Automation Testing</span>
+                  I am a <span ref={el} className="text-3xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"></span>
                 </h2>
                 <div className="text-left md:text-left text-gray-300 leading-relaxed">
                   <p>A skilled Automation Architect Engineer with a strong portfolio of Framework development and test scripts demonstrating proficiency in Selenium, Appium, and API testing. Passionate about staying current with the latest automation testing frameworks and methodologies, Thrives in dynamic teams, contributing creative solutions for test automation challenges and exploring innovative approaches to improve test coverage and reduce testing time.</p>
