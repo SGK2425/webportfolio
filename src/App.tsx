@@ -1,24 +1,69 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code2, Briefcase, User, ChevronDown, Globe, Twitter, Home, FileText, Phone, Instagram } from 'lucide-react';
 import Whatsapp from './Whatsapp';
 import Typed from 'typed.js';
 
 function App() {
-  const el = useRef(null);
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth'
+    });
+  };
 
   useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Frontend Automation", "Backend Automation", "Mobile Automation", "Macros Automation"],
-      typeSpeed: 150,
-      backSpeed: 150,
-      loop: true
-    });
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = window.pageYOffset;
+      const percentage = Math.round((scrolled / totalHeight) * 100);
+      setScrollPercentage(percentage);
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      typed.destroy(); // Cleanup on component unmount
+      window.removeEventListener('scroll', toggleVisibility);
+      window.removeEventListener('scroll', handleScroll);
     };
+  },);
+
+  const el = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (el.current) {
+      const typed = new Typed(el.current, {
+        strings: ["Frontend Automation", "Backend Automation", "Mobile Automation", "Macros Automation"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true
+      });
+
+      return () => {
+        typed.destroy();
+      };
+    }
   }, []);
-  
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -121,8 +166,9 @@ function App() {
       {/* Skill Section */}
       <section className="py-20 relative" id="skills">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-16 text-center"> My Key <span className="text-blue-500">Skills & Expertise </span>
- </h2>
+          <h2 className="text-4xl font-bold mb-16 text-center">
+            My Key <span className="text-blue-500">Skills & Expertise </span>
+          </h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-blue-500/20">
@@ -424,11 +470,11 @@ function App() {
             <a href="https://www.linkedin.com/in/gopikrishna-settipalli-sgk2425/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="mx-2 text-gray-400 hover:text-blue-500">
               <Linkedin className="w-6 h-6" />
             </a>
-                      
+
             <a href="//wa.me/919444344416" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp" className="mx-2 text-gray-400 hover:text-blue-500">
-              <Whatsapp className="w-6 h-6" />              
+              <Whatsapp className="w-6 h-6" />
             </a>
-            
+
             <a href="https://www.instagram.com/sgk2425" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="mx-2 text-gray-400 hover:text-blue-500">
               <Instagram className="w-6 h-6" />
             </a>
@@ -447,6 +493,40 @@ function App() {
           </p>
         </div>
       </footer>
+
+
+      {/* Scroll Section */}
+
+      {/* Scroll to Top Button */}
+
+      {isVisible && (
+        <div className="fixed bottom-20 right-8 z-50">
+          <button
+            onClick={scrollToTop}
+            className="p-3 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:scale-110 duration-300"
+            aria-label="Scroll to top"
+          >
+            <ChevronDown className="w-6 h-6 rotate-180" />
+          </button>
+        </div>
+      )}
+
+      {/* Scroll to Bottom Button */}
+      {isVisible && (
+        <div className="fixed bottom-8 right-8 z-50"> {/* Adjust position as needed */}
+          <button
+            onClick={scrollToBottom}
+            className="p-3 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:scale-110 duration-300 flex items-center"
+            aria-label="Scroll to bottom"
+          >
+            
+            <span className="ml-2 text-sm">{scrollPercentage}%</span>
+          </button>
+        </div>
+      )}
+
+
+
     </div>
   );
 }
