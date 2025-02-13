@@ -32,21 +32,51 @@ body {
 /* Form Styling */
 input,
 textarea {
-  @apply bg-gray-800 text-white border border-gray-700 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500; /* Tailwind classes */
+  @apply bg-gray-800 text-white border border-gray-700 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500;
 }
 
 label {
-  @apply text-gray-300 font-bold mb-2 block; /* Tailwind classes */
+  @apply text-gray-300 font-bold mb-2 block;
 }
 
 button[type="submit"] {
-  @apply bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full; /* Tailwind classes */
+  @apply bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full;
 }
 
-.contact-container { /* Style the form container */
-    @apply bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-blue-500/20 hover:border-blue-500 transition-colors max-w-xl mx-auto;
+.contact-container {
+  @apply bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-blue-500/20 hover:border-blue-500 transition-colors max-w-xl mx-auto;
 }
 
 a[type="submit"] {
-  @apply bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full; /* Tailwind classes */
+  @apply bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full;
+}
+
+.my-small-button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* Typewriter styles */
+.Typewriter {
+  display: inline-block;
+}
+
+.Typewriter__wrapper {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500;
+}
+
+.Typewriter__cursor {
+  @apply text-transparent from-blue-400 to-purple-500;
+}
+
+.samplecolor{
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500
+}
+
+.resumebutton{
+  @apply bg-gradient-to-r text-transparent from-blue-400 to-purple-500 text-white font-bold rounded-full hover:bg-blue-700 transition-all transform hover:scale-105 px-6 py-3
+}
+
+.scrollLevel{
+  @apply bg-gradient-to-r p-3 text-transparent from-blue-400 to-purple-500 text-white font-bold rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:scale-110 duration-300
 }
