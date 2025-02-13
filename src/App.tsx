@@ -140,7 +140,7 @@ function App() {
                 <div className="text-left md:text-left text-gray-300 leading-relaxed">
                   <p>A skilled Automation Architect Engineer with a strong portfolio of Framework development and test scripts demonstrating proficiency in Selenium, Appium, and API testing. Passionate about staying current with the latest automation testing frameworks and methodologies, Thrives in dynamic teams, contributing creative solutions for test automation challenges and exploring innovative approaches to improve test coverage and reduce testing time.</p>
                   <div className="flex flex-wrap gap-4 justify-start mt-4">
-                    <a href="#contact" className="bg-blue-600 rounded-full hover:bg-blue-700 transition-all transform hover:scale-105 px-4 py-2">
+                    <a className="resumebutton">
                       Check Resume
                     </a>
                   </div>
@@ -167,7 +167,7 @@ function App() {
       <section className="py-20 relative" id="skills">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-16 text-center">
-            My Key <span className="text-blue-500">Skills & Expertise </span>
+            My Key <span className="samplecolor">Skills & Expertise </span>
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -208,7 +208,7 @@ function App() {
       <section className="py-20 relative" id="experience">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-16 text-center">
-            Work <span className="text-blue-500">Experience</span>
+            Work <span className="samplecolor">Experience</span>
           </h2>
           <div className="max-w-4xl mx-auto space-y-8">
             {[
@@ -294,7 +294,7 @@ function App() {
       <section className="py-20 relative" id="projects">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-16 text-center">
-            Featured <span className="text-blue-500">Projects</span>
+            Featured <span className="samplecolor">Projects</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -365,7 +365,7 @@ function App() {
       <section className="py-20 relative" id="education">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-16 text-center">
-            Get In <span className="text-blue-500">Education</span>
+            Get In <span className="samplecolor">Education</span>
           </h2>
           <div className="max-w-4xl mx-auto space-y-8">
             {[
@@ -395,7 +395,7 @@ function App() {
               },
             ].map((edu, index) => (
               <div key={index} className="p-8 bg-black/50 backdrop-blur-sm rounded-xl border border-blue-500/20 hover:border-blue-500 transition-colors">
-                <h3 className="text-3xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">{edu.institution}</h3>
+                <h3 className="text-3xl md:text-3xl font-bold mb-5 bg-gradient-to-r bg-clip-text text-blue-500">{edu.institution}</h3>
                 <h4 className="text-xl font-semibold mt-3 text-blue-500">University : {edu.university}</h4>
                 <h6 className="text-xl font-semibold mt-3">{edu.degree}</h6>
                 <p className="text-gray-400 mt-2">Period : {edu.period}</p>
@@ -411,7 +411,7 @@ function App() {
       <section className="py-20 relative" id="contact">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-16 text-center">
-            Contact <span className="text-blue-500">Me</span>
+            Contact <span className="samplecolor">Me</span>
           </h2>
           <p className="text-gray-300 mb-12 text-lg text-center">
             Feel free to reach out to me for any questions or opportunities!
@@ -503,7 +503,7 @@ function App() {
         <div className="fixed bottom-20 right-8 z-50">
           <button
             onClick={scrollToTop}
-            className="p-3 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:scale-110 duration-300"
+            className="scrollLevel"
             aria-label="Scroll to top"
           >
             <ChevronDown className="w-6 h-6 rotate-180" />
@@ -512,20 +512,17 @@ function App() {
       )}
 
       {/* Scroll to Bottom Button */}
-      {isVisible && (
-        <div className="fixed bottom-8 right-8 z-50"> {/* Adjust position as needed */}
-          <button
-            onClick={scrollToBottom}
-            className="p-3 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:scale-110 duration-300 flex items-center"
-            aria-label="Scroll to bottom"
-          >
-            
-            <span className="ml-2 text-sm">{scrollPercentage}%</span>
-          </button>
-        </div>
-      )}
-
-
+{isVisible && (
+  <div className="fixed bottom-8 right-8 z-50">
+    <button
+      onClick={scrollToBottom}
+      className="scrollLevel" // Added justify-center
+      aria-label="Scroll to bottom"
+    >
+      <span className="text-sm">{scrollPercentage}%</span>
+    </button>
+  </div>
+)}
 
     </div>
   );
