@@ -80,3 +80,15 @@ a[type="submit"] {
 .scrollLevel{
   @apply bg-gradient-to-r p-3 text-transparent from-blue-400 to-purple-500 text-white font-bold rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:scale-110 duration-300
 }
+
+.page-percentage .scrollLevel{
+  border-radius : 50%;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollLevel{
+  height: 50px;
+  width: 50px; 
+}
