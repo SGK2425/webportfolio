@@ -168,7 +168,7 @@ function App() {
       <section className="py-20 relative" id="skills">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-16 text-center">
-            My Key <span className="samplecolor">Skills</span>
+            Key <span className="samplecolor">Skills</span>
           </h2>
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -180,7 +180,8 @@ function App() {
                     { name: 'Selenium WebDriver', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/selenium_lsuf6f' },
                     { name: 'Selenium GRID', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/grid_iguahs' },
                     { name: 'Selenium IDE', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/selenium_IDE_xmwevu' },
-                    { name: 'Cucumber', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/cucumber_viz2dt' },                   
+                    { name: 'Cucumber', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/cucumber_viz2dt' },
+                    { name: 'Java', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/java_rddnmg' },
                     { name: 'Postman', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/postman_n7bktn' },
                     { name: 'Restassured', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/Restassured_j9rpqd' },
                     { name: 'Swagger', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/Swagger-logo_d4edzw' },
@@ -188,11 +189,11 @@ function App() {
                     { name: 'Andriod', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/android_usay3t' },
                     { name: 'iOS', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/iOS_xyc5lo' },
                     { name: 'Cypress', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/cypress_mhoox3' },
-                    { name: 'Java', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/java_rddnmg' },
                     { name: 'Java Script', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/js_usaphr' },
                     { name: 'Maven', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/maven_kjxsaq' },
                     { name: 'TestNG', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/testNG_t3uiqa' },
-                    { name: 'Junit', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/junit_lqhcxa' }
+                    { name: 'Junit', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/junit_lqhcxa' },
+                    { name: 'VB Script', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/vb_script_b4nqxk' },
                   ].map((skill) => (
                     <div key={skill.name} className="flex items-center gap-3">
                       <img src={skill.image} alt={skill.name} className="w-8 h-8 rounded-full" /> {/* Image here */}
@@ -216,11 +217,18 @@ function App() {
                     { name: 'Eclipse', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/ecplice_aecemv' },
                     { name: 'VS Code', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/vs_kcvq5p' },
                     { name: 'Intellij', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/intellij_m0j7kk' },
+                    { name: 'Xcode', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/xcode_sw54w1' },
+                    { name: 'Android SDK', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/android_SDK_wal0rq' },
                     { name: 'HTML', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/html_wt3vzd' },
                     { name: 'CSS', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/css_hsztpx' },
                     { name: 'Jira', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/jira_iuoszn' },
-                    { name: 'Jenkins', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/jenkins_flxokr' }, 
-                    { name: 'CI/CD', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/CICD_img_xxrckg' }  
+                    { name: 'Jenkins', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/jenkins_flxokr' },
+                    { name: 'CI/CD', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/CICD_img_xxrckg' },
+                    { name: 'Node JS', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/nodejs_tuybtu' },
+                    { name: 'Json', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/json_sw3nqg' },
+                    { name: 'BrowserStack', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/browserstack_n00fza' },
+                    { name: 'Perfecto', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/perfecto_hmvbla' }
+
                   ].map((skill) => (
                     <div key={skill.name} className="flex items-center gap-3">
                       <img src={skill.image} alt={skill.name} className="w-8 h-8 rounded-full" />
@@ -494,30 +502,13 @@ function App() {
           </div>
 
           <div className="flex items-center justify-center py-4">
-            <a href="tel:+91-9444344416" target="_blank" rel="noopener noreferrer" aria-label="Phone" className="mx-2 text-gray-400 hover:text-blue-500">
-              <Phone className="w-6 h-6" />
-            </a>
-            <a href="mailto:sgk2425@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" className="mx-2 text-gray-400 hover:text-blue-500">
-              <Mail className="w-6 h-6" />
-            </a>
-            <a href="https://www.linkedin.com/in/gopikrishna-settipalli-sgk2425/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="mx-2 text-gray-400 hover:text-blue-500">
-              <Linkedin className="w-6 h-6" />
-            </a>
-
-            <a href="//wa.me/919444344416" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp" className="mx-2 text-gray-400 hover:text-blue-500">
-              <Whatsapp className="w-6 h-6" />
-            </a>
-
-            <a href="https://www.instagram.com/sgk2425" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="mx-2 text-gray-400 hover:text-blue-500">
-              <Instagram className="w-6 h-6" />
-            </a>
-            <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer" aria-label="X" className="mx-2 text-gray-400 hover:text-blue-500">
-              <Twitter className="w-6 h-6" />
-            </a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="mx-2 text-gray-400 hover:text-blue-500">
-              <Github className="w-6 h-6" />
-            </a>
-
+            <a href="tel:+91-9444344416" target="_blank" rel="noopener noreferrer" aria-label="Phone" className="mx-2 text-gray-400 hover:text-blue-500"> <Phone className="w-6 h-6" /> </a>
+            <a href="mailto:sgk2425@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" className="mx-2 text-gray-400 hover:text-blue-500"><Mail className="w-6 h-6" /> </a>
+            <a href="https://www.linkedin.com/in/gopikrishna-settipalli-sgk2425/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="mx-2 text-gray-400 hover:text-blue-500"> <Linkedin className="w-6 h-6" /> </a>
+            <a href="//wa.me/919444344416" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp" className="mx-2 text-gray-400 hover:text-blue-500"> <Whatsapp className="w-6 h-6" /> </a>
+            <a href="https://www.instagram.com/sgk2425" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="mx-2 text-gray-400 hover:text-blue-500"> <Instagram className="w-6 h-6" /> </a>
+            <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer" aria-label="X" className="mx-2 text-gray-400 hover:text-blue-500"> <Twitter className="w-6 h-6" /> </a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="mx-2 text-gray-400 hover:text-blue-500"> <Github className="w-6 h-6" /> </a>
           </div>
 
           <p className="text-gray-400 mt-4">
