@@ -163,38 +163,71 @@ function App() {
         </div>
       </header>
 
+
       {/* Skill Section */}
       <section className="py-20 relative" id="skills">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-16 text-center">
-            My Key <span className="samplecolor">Skills & Expertise </span>
+            My Key <span className="samplecolor">Skills</span>
           </h2>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-blue-500/20">
-                <h3 className="text-2xl font-semibold mb-6 text-blue-400">Frontend Skills</h3>
-                <div className="space-y-4">
-                  {['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Redux'].map((skill) => (
-                    <div key={skill} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span className="text-gray-300">{skill}</span>
-                      <div className="flex-1 h-2 bg-gray-700 rounded-full ml-2">
+              <div className="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-blue-500/20 hover:border-blue-500 transition-colors">
+                <h3 className="text-2xl font-semibold mb-6 text-blue-400 text-center">Automation Expertise</h3>
+                <div className="flex flex-wrap gap-4">
+                  {/* Map over your skills data */}
+                  {[
+                    { name: 'Selenium WebDriver', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/selenium_lsuf6f' },
+                    { name: 'Selenium GRID', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/grid_iguahs' },
+                    { name: 'Selenium IDE', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/selenium_IDE_xmwevu' },
+                    { name: 'Cucumber', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/cucumber_viz2dt' },                   
+                    { name: 'Postman', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/postman_n7bktn' },
+                    { name: 'Restassured', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/Restassured_j9rpqd' },
+                    { name: 'Swagger', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/Swagger-logo_d4edzw' },
+                    { name: 'Appium', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/Appium_tcjdt5' },
+                    { name: 'Andriod', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/android_usay3t' },
+                    { name: 'iOS', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/iOS_xyc5lo' },
+                    { name: 'Cypress', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/cypress_mhoox3' },
+                    { name: 'Java', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/java_rddnmg' },
+                    { name: 'Java Script', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/js_usaphr' },
+                    { name: 'Maven', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/maven_kjxsaq' },
+                    { name: 'TestNG', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/testNG_t3uiqa' },
+                    { name: 'Junit', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/junit_lqhcxa' }
+                  ].map((skill) => (
+                    <div key={skill.name} className="flex items-center gap-3">
+                      <img src={skill.image} alt={skill.name} className="w-8 h-8 rounded-full" /> {/* Image here */}
+                      <span className="text-gray-300">{skill.name}</span>
+                      {/* You can keep or remove the progress bars */}
+                      {/* <div className="flex-1 h-2 bg-gray-700 rounded-full ml-2">
                         <div className="h-full bg-blue-500 rounded-full" style={{ width: `${Math.random() * 30 + 70}%` }}></div>
-                      </div>
+                      </div> */}
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-blue-500/20">
-                <h3 className="text-2xl font-semibold mb-6 text-blue-400">Backend Skills</h3>
-                <div className="space-y-4">
-                  {['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'AWS'].map((skill) => (
-                    <div key={skill} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span className="text-gray-300">{skill}</span>
-                      <div className="flex-1 h-2 bg-gray-700 rounded-full ml-2">
+
+              {/* Others Skills */}
+              <div className="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-blue-500/20 hover:border-blue-500 transition-colors">
+                <h3 className="text-2xl font-semibold mb-6 text-blue-400 text-center">Others Expertise</h3>
+                <div className="flex flex-wrap gap-4">
+                  {[
+                    { name: 'Git', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/git_img_ldkgtv' },
+                    { name: 'GitHub', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/gitHub_j0ln6r' },
+                    { name: 'Eclipse', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/ecplice_aecemv' },
+                    { name: 'VS Code', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/vs_kcvq5p' },
+                    { name: 'Intellij', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/intellij_m0j7kk' },
+                    { name: 'HTML', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/html_wt3vzd' },
+                    { name: 'CSS', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/css_hsztpx' },
+                    { name: 'Jira', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/jira_iuoszn' },
+                    { name: 'Jenkins', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/jenkins_flxokr' }, 
+                    { name: 'CI/CD', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/CICD_img_xxrckg' }  
+                  ].map((skill) => (
+                    <div key={skill.name} className="flex items-center gap-3">
+                      <img src={skill.image} alt={skill.name} className="w-8 h-8 rounded-full" />
+                      <span className="text-gray-300">{skill.name}</span>
+                      {/* <div className="flex-1 h-2 bg-gray-700 rounded-full ml-2">
                         <div className="h-full bg-blue-500 rounded-full" style={{ width: `${Math.random() * 30 + 70}%` }}></div>
-                      </div>
+                      </div> */}
                     </div>
                   ))}
                 </div>
@@ -512,17 +545,17 @@ function App() {
       )}
 
       {/* Scroll to Bottom Button */}
-{isVisible && (
-  <div className="fixed bottom-8 right-8 z-50">
-    <button
-      onClick={scrollToBottom}
-      className="scrollLevel" // Added justify-center
-      aria-label="Scroll to bottom"
-    >
-      <span className="text-sm">{scrollPercentage}%</span>
-    </button>
-  </div>
-)}
+      {isVisible && (
+        <div className="fixed bottom-8 right-8 z-50">
+          <button
+            onClick={scrollToBottom}
+            className="scrollLevel" // Added justify-center
+            aria-label="Scroll to bottom"
+          >
+            <span className="text-sm">{scrollPercentage}%</span>
+          </button>
+        </div>
+      )}
 
     </div>
   );
