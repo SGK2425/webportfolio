@@ -451,15 +451,18 @@ function App() {
       {/* Contact Section */}
       <section className="py-20 relative" id="contact">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-16 text-center">
+          <h2 className="text-4xl font-bold mb-12 text-center">
             Contact <span className="samplecolor">Me</span>
           </h2>
-          <p className="text-gray-300 mb-12 text-lg text-center">
+          <p className="text-gray-300 mb-9 text-lg text-center">
             Feel free to reach out to me for any questions or opportunities!
           </p>
 
           <div className="max-w-xl mx-auto bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-blue-500/20 hover:border-blue-500 transition-colors">
             <form onSubmit={handleSubmit}>
+
+              <div class="text-3xl font-bold mb-6">Email Me 🚀</div>
+              
               <div className="mb-4">
                 <input type="email" id="email" name="email" placeholder="Your Email" required className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
