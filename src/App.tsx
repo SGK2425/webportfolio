@@ -579,7 +579,7 @@ function App() {
               </div>
 
               <div className="mb-6">
-                <textarea id="message" name="message" placeholder="Message" rows={4} value={formData.email} onChange={handleChange} className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+                <textarea id="message" name="message" placeholder="Message" rows={4} value={formData.message} onChange={handleChange} className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
               </div>
 
               <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors">Send Message</button>
