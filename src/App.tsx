@@ -5,6 +5,16 @@ import Typed from 'typed.js';
 
 function App() {
 
+  const [selectedProject, setSelectedProject] = useState<any>(null); // State for the selected project
+
+  const handleProjectClick = (project: any) => {
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   const [isVisible, setIsVisible] = useState(false);
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
@@ -221,7 +231,10 @@ function App() {
                     { name: 'Node JS', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/nodejs_tuybtu' },
                     { name: 'Json', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/json_sw3nqg' },
                     { name: 'BrowserStack', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/browserstack_n00fza' },
-                    { name: 'Perfecto', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/perfecto_hmvbla' }
+                    { name: 'Perfecto', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/perfecto_hmvbla' },
+                    { name: 'SonarQube', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/sonarQube_mn1lbx' },
+                    { name: 'Jacoco', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/jacoco_crzbxp' },
+                    { name: 'Kibana', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/kibana_huoh8h' }
 
                   ].map((skill) => (
                     <div key={skill.name} className="flex items-center gap-3">
@@ -250,7 +263,7 @@ function App() {
               {
                 company: 'EY Technology Solutions',
                 role: 'Associate Test Manager',
-                period: 'SEP 2021 - Present',
+                period: 'Sep 2021 - Present',
                 description: [
                   'Led development of multiple high-impact projects',
                   'Mentored junior developers and conducted code reviews',
@@ -260,7 +273,7 @@ function App() {
               {
                 company: 'HCL Technologies',
                 role: 'Test Lead',
-                period: 'DEC 2019 - SEP 2021',
+                period: 'Dec 2019 - Sep 2021',
                 description: [
                   'Developed and maintained various web applications',
                   'Implemented responsive designs and improved UX',
@@ -270,7 +283,7 @@ function App() {
               {
                 company: 'Hexaware Technologies',
                 role: 'System Analyst',
-                period: 'JAN 2018 - DEC 2019',
+                period: 'Jan 2018 - Dec 2019',
                 description: [
                   'Developed and maintained various web applications',
                   'Implemented responsive designs and improved UX',
@@ -280,7 +293,7 @@ function App() {
               {
                 company: 'Payoda Technology Inc',
                 role: 'Senior Test Engineer',
-                period: 'DEC 2014 - NOV 2017',
+                period: 'Dec 2014 - Nov 2017',
                 description: [
                   'Developed and maintained various web applications',
                   'Implemented responsive designs and improved UX',
@@ -290,7 +303,7 @@ function App() {
               {
                 company: 'Iframes Technologies',
                 role: 'Software Developer',
-                period: 'Jan 2013 - DEC 2014',
+                period: 'Jan 2013 - Dec 2014',
                 description: [
                   'Developed and maintained various web applications',
                   'Implemented responsive designs and improved UX',
@@ -334,47 +347,113 @@ function App() {
                 title: 'Aladdin Blackrock',
                 description: 'A full-featured e-commerce platform built with React, Node.js, and PostgreSQL',
                 image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                tech: ['React', 'Node.js', 'PostgreSQL']
+                tech: ['Cypress', 'JavaScript','BDD', 'Spring boot','API Testing','Postman','GIT'],
+                projectDescription: 'testing',
+                Roles: ['Understanding the requirement.',
+                        'Identifying test cases for Functional and Automation.',
+                       'Preparing Test scripts for Selenium WebDriver, Appium and API Testing',
+                       'Updating framework functions when needed.',
+                       'Execution of test scripts for cross Browser testing and Devices.',
+                       'Report verification and validation.',
+                       'Review of Test Scripts and Execution Scripts',
+                       'Reviewing the test reports and preparing the Test summary reports.']
               },
               {
                 title: 'Morgan Stanley',
                 description: 'Real-time task management application with team collaboration features',
                 image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                tech: ['Next.js', 'Socket.io', 'MongoDB']
+                tech: ['Selenium', 'Java', 'BDD', 'Macros', 'VB Script', 'Fast Framework','GIT'],
+                projectDescription: '',
+                Roles: ['Understanding the requirement.',
+                        'Identifying test cases for Functional and Automation.',
+                       'Preparing Test scripts for Selenium WebDriver, Appium and API Testing',
+                       'Updating framework functions when needed.',
+                       'Execution of test scripts for cross Browser testing and Devices.',
+                       'Report verification and validation.',
+                       'Review of Test Scripts and Execution Scripts',
+                       'Reviewing the test reports and preparing the Test summary reports.']
               },
               {
                 title: 'RF360 Qualcomm',
                 description: 'AI-powered content generation tool using OpenAI API and React',
                 image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                tech: ['React', 'OpenAI', 'TailwindCSS']
+                tech: ['Selenium', 'Java', 'BDD', 'Mobile Automation', 'Postman', 'Restassured','GIT'],
+                projectDescription: 'AR Stock tool which is custom application for RF360 all entities and RFFE Germany employees. This tool is mainly deployed for provide that the AR stock and promotion stock who are eligible in annual review process. Only for who has QUALCOMM ids can access this tool. Manager and Above roles can view/Edit the stock rating, Promotion and generating the stock reward statement for the employees. The AR stock tool is generated only for China, Singapore and Germany employees who are eligible for stock rating.',
+                Roles: ['Understanding the requirement.',
+                        'Identifying test cases for Functional and Automation.',
+                       'Preparing Test scripts for Selenium WebDriver, Appium and API Testing',
+                       'Updating framework functions when needed.',
+                       'Execution of test scripts for cross Browser testing and Devices.',
+                       'Report verification and validation.',
+                       'Review of Test Scripts and Execution Scripts',
+                       'Reviewing the test reports and preparing the Test summary reports.']
               },
               {
                 title: 'NeoLink BNP Paribas',
                 description: 'A full-featured e-commerce platform built with React, Node.js, and PostgreSQL',
                 image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                tech: ['React', 'Node.js', 'PostgreSQL']
+                tech: ['Selenium', 'Java', 'BDD', 'Postman', 'Restassured','SVN'],
+                projectDescription: 'Using Neo-Link Application Global execution offering allows clients to trade all electronic securities across over 90 markets worldwide. They simply execute trades through one of our execution to custody partners and leave the rest to us. Clearing and settlement services we connect clients trading activities to post trading market infrastructures either through a single global window or multi-direct set-up. Trade settlement needs to work efficiently and cost efficiently. Local custody key to successful post-trade processing is a partner who is at home in local market. Client can rely on deep understanding of local practices and rules. BNP Paribas securities services have launched a solution that allows our clients to anticipate liquidity requirements, leverage assert and optimise cash management.',
+                Roles:['Identifying test cases for automation.',
+                      'Understanding the requirement.',
+                      'Preparing Test scripts for Selenium WebDriver',
+                      'Good experience in Xpath on identifying objects.',
+                      'Updating framework functions when needed.',
+                      'Execution of test scripts for IE Browser testing.',
+                      'Report verification and validation.',
+                      'Review of Test Scripts and Execution Scripts',
+                      'Reviewing the test reports and preparing the Test summary reports.']
               },
               {
                 title: 'CVP Arista Networks',
                 description: 'Real-time task management application with team collaboration features',
                 image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                tech: ['Next.js', 'Socket.io', 'MongoDB']
+                tech: ['Selenium', 'Java', 'BDD', 'Swagger', 'Postman', 'Restassured','SVN','SonarQube', 'Jacoco'],
+                projectDescription: 'Arista is the core of Arista cloud networking solutions for next-generation data centres and cloud networks Cloud architectures built with Arista EOS scale to tens of thousands of compute and storage nodes with management and provisioning capabilities that work at scale. Through its programmability, EOS enables a set of software applications that deliver workflow automation, unprecedented network visibility and analytics and rapid integration with a wide range of third-party applications for virtualization, management, automation, and orchestration services. Arista Extensible Operating System (EOS) is a fully programmable and highly modular, Linux based network operation system, using familiar industry standard CLI and runs a single binary software image across the Arista switching family. Architected for resiliency and programmability, EOS has a unique multi-process state sharing architecture that separates state information and packet forwarding from protocol processing and application logic.',
+                Roles:['Identifying test cases for automation.',
+                      'Understanding the requirement.',
+                      'Preparing Test scripts for Selenium WebDriver',
+                      'Good experience in Xpath on identifying objects.',
+                      'Updating framework functions when needed.',
+                      'Execution of test scripts for Cross Browser testing.',
+                      'Report verification and validation.',
+                      'Review of Test Scripts and Execution Scripts',
+                      'Reviewing the test reports and preparing the Test summary reports.']
+              },
+              {
+                title: 'CREXENDO',
+                description: 'AI-powered content generation tool using OpenAI API and React',
+                image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                tech: ['Selenium', 'Java', 'Android', 'iOS', 'Andriod Studio','Xcode','physical Devices'],
+                projectDescription: 'Crexendo Video calling is an application which has ability to user can perform video calls on one to one basis with another Crexendo contact using the Crexendo application.The user can start an instant chat with other Crexendo user on one to one basis using the Crexendo application. The modules for the application like Sign Up, History, Contacts, Voice Calls, Video Calling, Instant Message and Settings.',
+                Roles:['Identifying test cases for Manual Testing.',
+                      'Understanding the requirement.',
+                      'Preparing test cases using Redmine',
+                      'Execution test script for Android and IOS mobiles using Appium.',
+                      'Automate using Real devices and emulators.',
+                      'Using Appium for mobile automation.',
+                      'Report verification and validation',
+                      'Reviewing the test Reports and Preparing test summary reports.']
               },
               {
                 title: 'Jovia Health Care',
                 description: 'AI-powered content generation tool using OpenAI API and React',
                 image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                tech: ['React', 'OpenAI', 'TailwindCSS']
+                tech: ['Selenium IDE', 'Java', 'Selenium Webdriver', 'Funactional Testing'],
+                projectDescription: 'Health Fleet is pioneering a new horizon in preventive healthcare and support, one that focuses on individual needs, personal interaction and results Personalized Medical Nutrition and Behavioural Therapy-based health programs Dedicated health counsellors to oversee care and progress Accessible team of cross-functional health specialists committed to each user\'s success Robust, easy-to-use online platform for secure, at-home counselling Affordable care that can scale to meet the varying needs of users Just like the health characteristics of our users, our individualized prevention programs are unique. Each one is created and implemented by a team of highly qualified, highly dedicated healthcare professionals from a range of specialties. This multi-disciplinary approach enables us to meet many user needs and create a balance of one-on-one and group counselling. Our users access their live counselling through high-definition video (or via phone) for privacy and convenience.',
+                Roles:['Identifying test cases for Manual Testing and Automation test cases.',
+                      'Understanding the requirement.',
+                      'Preparing test scripts using Selenium IDE',
+                      'Updating framework functions when needed.',
+                      'Execution test script for cross browser testing',
+                      'Report verification and validations',
+                      'Reviewing the test Reports and Preparing test summary reports']
               }
             ].map((project, index) => (
               <div key={index} className="group">
-                <div className="relative overflow-hidden rounded-xl bg-black/50 backdrop-blur-sm border border-blue-500/20 hover:border-blue-500 transition-colors">
+                <div className="relative overflow-hidden rounded-xl bg-black/50 backdrop-blur-sm border border-blue-500/20 hover:border-blue-500 transition-colors" onClick={() => handleProjectClick(project)}>
                   <div className="relative h-48">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
                     <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                   </div>
                   <div className="p-6">
@@ -388,13 +467,9 @@ function App() {
                       ))}
                     </div>
                     <div className="flex gap-4">
-                      <a href="#" className="inline-flex items-center gap-1 text-sm text-blue-400 hover:text-blue-300">
-                        <Github className="w-4 h-4" />
-                        Code
-                      </a>
-                      <a href="#" className="inline-flex items-center gap-1 text-sm text-blue-400 hover:text-blue-300">
+                      <a className="inline-flex items-center gap-1 text-sm text-blue-400 hover:text-blue-300">
                         <ExternalLink className="w-4 h-4" />
-                        Live Demo
+                        More Details
                       </a>
                     </div>
                   </div>
@@ -404,6 +479,30 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Modal */}
+      {selectedProject && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-md">
+          <div className="bg-gray-900 p-8 rounded-lg max-w-3xl relative">
+            <button className="absolute top-3 right-3 text-gray-400 hover:text-gray-200" onClick={closeModal} aria-label="Close Modal">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <h2 className="project-title">{selectedProject.title}</h2>
+            <p className="text-gray-300 mb-6">{selectedProject.projectDescription}</p>
+            <h3 className="project-title">Roles & Responsibility:</h3>
+            <ul className="list-disc list-inside text-gray-300">
+              {selectedProject.Roles.map((Roles: string, index: number) => (
+                <li key={index}>{Roles}</li>
+              ))}
+            </ul>
+            {/* You can add more details like roles and responsibilities here */}
+            
+          </div>
+        </div>
+      )}
+
 
       {/* Education Section */}
       <section className="py-20 relative" id="education">
