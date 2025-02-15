@@ -523,24 +523,29 @@ function App() {
 
       {/* Scroll Section */}
 
-      {/* Scroll to Top Button */}
+      <div>
 
-      {isVisible && (
-        <div className="fixed bottom-20 right-8 z-50">
-          <button onClick={scrollToTop} className="scrollLevel" aria-label="Scroll to top">
-            <ChevronDown className="w-6 h-6 rotate-180" />
-          </button>
-        </div>
-      )}
+        {/* Scroll to Top Button */}
 
-      {/* Scroll to Bottom Button */}
-      {isVisible && (
-        <div className="fixed bottom-8 right-8 z-50 page-percentage">
-          <button onClick={scrollToBottom} className="scrollLevel" aria-label="Scroll to bottom">
-            <span className="text-sm">{scrollPercentage}%</span>
-          </button>
-        </div>
-      )}
+        {isVisible && (
+          <div className="fixed bottom-20 right-8 z-50">
+            <button onClick={scrollToTop} className="scrollLevel mb-2" aria-label="Scroll to top">
+              <ChevronDown className="w-6 h-6 rotate-180" />
+            </button>
+          </div>
+        )}
+
+        {/* Scroll to Bottom Button */}
+        {isVisible && (
+          <div className="fixed bottom-8 right-8 z-50 page-percentage">
+            <button onClick={scrollToBottom} className="scrollLevel" aria-label="Scroll to bottom">
+              <span className="text-sm">{scrollPercentage}%</span>
+            </button>
+          </div>
+        )}
+
+      </div>
+
 
     </div>
   );
