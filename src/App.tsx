@@ -348,7 +348,7 @@ function App() {
               {
                 title: 'Aladdin Blackrock',
                 description: 'A full-featured e-commerce platform built with React, Node.js, and PostgreSQL',
-                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/arista_je2x4e',
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/br_r4konf',
                 tech: ['Cypress', 'JavaScript', 'BDD', 'Spring boot', 'API Testing', 'Postman', 'GIT'],
                 projectDescription: 'testing',
                 Roles: ['Understanding the requirement.',
@@ -363,7 +363,7 @@ function App() {
               {
                 title: 'Morgan Stanley',
                 description: 'Real-time task management application with team collaboration features',
-                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/arista_je2x4e',
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/ms_k6wflg',
                 tech: ['Selenium', 'Java', 'BDD', 'Macros', 'VB Script', 'Fast Framework', 'GIT'],
                 projectDescription: '',
                 Roles: ['Understanding the requirement.',
@@ -378,7 +378,7 @@ function App() {
               {
                 title: 'RF360 Qualcomm',
                 description: 'AI-powered content generation tool using OpenAI API and React',
-                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/arista_je2x4e',
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/rf_woji4c',
                 tech: ['Selenium', 'Java', 'BDD', 'Mobile Automation', 'Postman', 'Restassured', 'GIT'],
                 projectDescription: 'AR Stock tool which is custom application for RF360 all entities and RFFE Germany employees. This tool is mainly deployed for provide that the AR stock and promotion stock who are eligible in annual review process. Only for who has QUALCOMM ids can access this tool. Manager and Above roles can view/Edit the stock rating, Promotion and generating the stock reward statement for the employees. The AR stock tool is generated only for China, Singapore and Germany employees who are eligible for stock rating.',
                 Roles: ['Understanding the requirement.',
@@ -440,7 +440,7 @@ function App() {
               {
                 title: 'Jovia Health Care',
                 description: 'AI-powered content generation tool using OpenAI API and React',
-                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/arista_je2x4e',
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/healthFeet_gqklwa',
                 tech: ['Selenium IDE', 'Java', 'Selenium Webdriver', 'Funactional Testing'],
                 projectDescription: 'Health Fleet is pioneering a new horizon in preventive healthcare and support, one that focuses on individual needs, personal interaction and results Personalized Medical Nutrition and Behavioural Therapy-based health programs Dedicated health counsellors to oversee care and progress Accessible team of cross-functional health specialists committed to each user\'s success Robust, easy-to-use online platform for secure, at-home counselling Affordable care that can scale to meet the varying needs of users Just like the health characteristics of our users, our individualized prevention programs are unique. Each one is created and implemented by a team of highly qualified, highly dedicated healthcare professionals from a range of specialties. This multi-disciplinary approach enables us to meet many user needs and create a balance of one-on-one and group counselling. Our users access their live counselling through high-definition video (or via phone) for privacy and convenience.',
                 Roles: ['Identifying test cases for Manual Testing and Automation test cases.',
