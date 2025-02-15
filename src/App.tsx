@@ -76,38 +76,29 @@ function App() {
   }, []);
 
 
-  const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-    });
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-    const handleChange = (event) => {
-        setFormData({ ...formData, [event.target.name]: event.target.value });
+    const params = {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault(); // Prevent form from refreshing the page
+    console.log("Sending email with params:", params); // Debugging
 
-        const params = {
-            name: formData.name,
-            email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-        };
-      console.log(params)
-        emailjs.init("FDXkEzVRDhwO0iSBD");
-        emailjs.send('service_ws5ifjl', 'template_adsokz9', params) // Use correct service and template IDs
-            .then((response) => {
-                console.log('Email sent successfully!', response);
-                alert("Email sent successfully!");
-                setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
-            }, (error) => {
-                console.error('Failed to send email:', error);
-                alert("Failed to send email. Please try again later."); // User-friendly error message
-            });
-    };
+    emailjs.send('service_ws5ifjl', 'template_adsokz9', params)
+        .then((response) => {
+            console.log('Email sent successfully!', response);
+            alert("Email sent successfully!");
+            setFormData({ name: '', email: '', subject: '', message: '' });
+        })
+        .catch((error) => {
+            console.error('Failed to send email:', error);
+            alert("Failed to send email. Please try again later.");
+        });
+};
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
