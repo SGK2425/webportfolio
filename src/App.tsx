@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code2, Briefcase, User, ChevronDown, Globe, Twitter, Home, FileText, Phone, Instagram } from 'lucide-react';
 import Whatsapp from './Whatsapp';
 import Typed from 'typed.js';
+import emailjs from '@emailjs/browser';
 
 function App() {
 
@@ -74,39 +75,40 @@ function App() {
     }
   }, []);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
-    const email = formData.get('email');
-    const name = formData.get('name');
-    const subject = formData.get('subject');
-    const message = formData.get('message');
+  const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+    });
 
-    fetch('http://localhost:5000/api/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, name, subject, message }),
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Success:', data);
-        event.currentTarget.reset();
-        alert("Message sent successfully!");
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert("Error sending message. Please try again later.");
-      });
-  };
+    const handleChange = (event) => {
+        setFormData({ ...formData, [event.target.name]: event.target.value });
+    };
 
+    const handleSubmit = (event) => {
+        event.preventDefault(); // Prevent form from refreshing the page
+
+        const params = {
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+        };
+      console.log(params)
+        emailjs.init("FDXkEzVRDhwO0iSBD");
+        emailjs.send('service_ws5ifjl', 'template_adsokz9', params) // Use correct service and template IDs
+            .then((response) => {
+                console.log('Email sent successfully!', response);
+                alert("Email sent successfully!");
+                setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
+            }, (error) => {
+                console.error('Failed to send email:', error);
+                alert("Failed to send email. Please try again later."); // User-friendly error message
+            });
+    };
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Navigation */}
@@ -564,19 +566,20 @@ function App() {
               <div className="text-3xl font-bold mb-6">Email Me 🚀</div>
 
               <div className="mb-4">
-                <input type="email" id="email" name="email" placeholder="Your Email" required className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="email" id="email" name="email" placeholder="Your Email" required value={formData.email} onChange={handleChange}
+                            className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue 500"/>
               </div>
 
               <div className="mb-4">
-                <input type="text" id="name" name="name" placeholder="Your Name" required className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="text" id="name" name="name" placeholder="Your Name" required value={formData.name} onChange={handleChange} className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
 
               <div className="mb-4">
-                <input type="text" id="subject" name="subject" placeholder="Subject" className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="text" id="subject" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
 
               <div className="mb-6">
-                <textarea id="message" name="message" placeholder="Message" rows={4} className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+                <textarea id="message" name="message" placeholder="Message" rows={4} value={formData.message} onChange={handleChange} className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
               </div>
 
               <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors">Send Message</button>
