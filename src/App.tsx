@@ -77,38 +77,38 @@ function App() {
 
 
   const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-    });
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
 
-    const handleChange = (event) => {
-        setFormData({ ...formData, [event.target.name]: event.target.value });
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    const params = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
     };
+    console.log(params)
+    emailjs.init("FDXkEzVRDhwO0iSBD");
+    emailjs.send('service_ws5ifjl', 'template_adsokz9', params) // Use correct service and template IDs
+      .then((response) => {
+        console.log('Email sent successfully!', response);
+        alert("Email sent successfully!");
+        setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
+      }, (error) => {
+        console.error('Failed to send email:', error);
+        alert("Failed to send email. Please try again later."); // User-friendly error message
+      });
+  };
 
-    const handleSubmit = (event) => {
-        event.preventDefault(); // Prevent form from refreshing the page
-
-        const params = {
-            name: formData.name,
-            email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-        };
-        console.log(params)
-        emailjs.init("FDXkEzVRDhwO0iSBD");
-        emailjs.send('service_ws5ifjl', 'template_adsokz9', params) // Use correct service and template IDs
-            .then((response) => {
-                console.log('Email sent successfully!', response);
-                alert("Email sent successfully!");
-                setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
-            }, (error) => {
-                console.error('Failed to send email:', error);
-                alert("Failed to send email. Please try again later."); // User-friendly error message
-            });
-    };
-  
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Navigation */}
@@ -117,12 +117,12 @@ function App() {
           <div className="flex justify-between items-center py-4">
             <a href="#" className="text-2xl font-bold text-blue-500">JD</a>
             <div className="hidden md:flex space-x-8">
-              <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">About</a>
-              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
-              <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">Experience</a>
-              <a href="#education" className="hover:text-blue-500 transition-colors flex items-center gap-2">Education</a>
-              <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">Projects</a>
+              <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">Home</a>
               <a href="#skills" className="hover:text-blue-500 transition-colors flex items-center gap-2">Skills</a>
+              <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">Experience</a>
+              <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">Projects</a>
+              <a href="#education" className="hover:text-blue-500 transition-colors flex items-center gap-2">Education</a>
+              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
             </div>
             <a
               href="#"
@@ -152,7 +152,7 @@ function App() {
                 <div className="text-left md:text-left text-gray-300 leading-relaxed">
                   <p>A skilled Automation Architect Engineer with a strong portfolio of Framework development and test scripts demonstrating proficiency in Selenium, Appium, and API testing. Passionate about staying current with the latest automation testing frameworks and methodologies, Thrives in dynamic teams, contributing creative solutions for test automation challenges and exploring innovative approaches to improve test coverage and reduce testing time.</p>
                   <div className="flex flex-wrap gap-4 justify-start mt-4">
-                    <a className="resumebutton">Check Resume</a>
+                    <a href="https://drive.google.com/file/d/1-xWqgHeiL3AyqCtxsIGqjaSPNZ_PXQnZ/view" className="resumebutton" target="_blank">Check Resume</a>
                   </div>
                 </div>
               </div>
@@ -348,114 +348,114 @@ function App() {
               {
                 title: 'Aladdin Blackrock',
                 description: 'A full-featured e-commerce platform built with React, Node.js, and PostgreSQL',
-                image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                tech: ['Cypress', 'JavaScript','BDD', 'Spring boot','API Testing','Postman','GIT'],
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/arista_je2x4e',
+                tech: ['Cypress', 'JavaScript', 'BDD', 'Spring boot', 'API Testing', 'Postman', 'GIT'],
                 projectDescription: 'testing',
                 Roles: ['Understanding the requirement.',
-                        'Identifying test cases for Functional and Automation.',
-                       'Preparing Test scripts for Selenium WebDriver, Appium and API Testing',
-                       'Updating framework functions when needed.',
-                       'Execution of test scripts for cross Browser testing and Devices.',
-                       'Report verification and validation.',
-                       'Review of Test Scripts and Execution Scripts',
-                       'Reviewing the test reports and preparing the Test summary reports.']
+                  'Identifying test cases for Functional and Automation.',
+                  'Preparing Test scripts for Cypress, Appium and API Testing',
+                  'Updating framework functions when needed.',
+                  'Execution of test scripts for cross Browser testing and Devices.',
+                  'Report verification and validation.',
+                  'Review of Test Scripts and Execution Scripts',
+                  'Reviewing the test reports and preparing the Test summary reports.']
               },
               {
                 title: 'Morgan Stanley',
                 description: 'Real-time task management application with team collaboration features',
-                image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                tech: ['Selenium', 'Java', 'BDD', 'Macros', 'VB Script', 'Fast Framework','GIT'],
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/arista_je2x4e',
+                tech: ['Selenium', 'Java', 'BDD', 'Macros', 'VB Script', 'Fast Framework', 'GIT'],
                 projectDescription: '',
                 Roles: ['Understanding the requirement.',
-                        'Identifying test cases for Functional and Automation.',
-                       'Preparing Test scripts for Selenium WebDriver, Appium and API Testing',
-                       'Updating framework functions when needed.',
-                       'Execution of test scripts for cross Browser testing and Devices.',
-                       'Report verification and validation.',
-                       'Review of Test Scripts and Execution Scripts',
-                       'Reviewing the test reports and preparing the Test summary reports.']
+                  'Identifying test cases for Functional and Automation.',
+                  'Preparing Test scripts for Selenium WebDriver, Appium and API Testing',
+                  'Updating framework functions when needed.',
+                  'Execution of test scripts for cross Browser testing and Devices.',
+                  'Report verification and validation.',
+                  'Review of Test Scripts and Execution Scripts',
+                  'Reviewing the test reports and preparing the Test summary reports.']
               },
               {
                 title: 'RF360 Qualcomm',
                 description: 'AI-powered content generation tool using OpenAI API and React',
-                image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                tech: ['Selenium', 'Java', 'BDD', 'Mobile Automation', 'Postman', 'Restassured','GIT'],
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/arista_je2x4e',
+                tech: ['Selenium', 'Java', 'BDD', 'Mobile Automation', 'Postman', 'Restassured', 'GIT'],
                 projectDescription: 'AR Stock tool which is custom application for RF360 all entities and RFFE Germany employees. This tool is mainly deployed for provide that the AR stock and promotion stock who are eligible in annual review process. Only for who has QUALCOMM ids can access this tool. Manager and Above roles can view/Edit the stock rating, Promotion and generating the stock reward statement for the employees. The AR stock tool is generated only for China, Singapore and Germany employees who are eligible for stock rating.',
                 Roles: ['Understanding the requirement.',
-                        'Identifying test cases for Functional and Automation.',
-                       'Preparing Test scripts for Selenium WebDriver, Appium and API Testing',
-                       'Updating framework functions when needed.',
-                       'Execution of test scripts for cross Browser testing and Devices.',
-                       'Report verification and validation.',
-                       'Review of Test Scripts and Execution Scripts',
-                       'Reviewing the test reports and preparing the Test summary reports.']
+                  'Identifying test cases for Functional and Automation.',
+                  'Preparing Test scripts for Selenium WebDriver, Appium and API Testing',
+                  'Updating framework functions when needed.',
+                  'Execution of test scripts for cross Browser testing and Devices.',
+                  'Report verification and validation.',
+                  'Review of Test Scripts and Execution Scripts',
+                  'Reviewing the test reports and preparing the Test summary reports.']
               },
               {
                 title: 'NeoLink BNP Paribas',
                 description: 'A full-featured e-commerce platform built with React, Node.js, and PostgreSQL',
-                image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                tech: ['Selenium', 'Java', 'BDD', 'Postman', 'Restassured','SVN'],
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/neolink_i94ybi',
+                tech: ['Selenium', 'Java', 'BDD', 'Postman', 'Restassured', 'SVN'],
                 projectDescription: 'Using Neo-Link Application Global execution offering allows clients to trade all electronic securities across over 90 markets worldwide. They simply execute trades through one of our execution to custody partners and leave the rest to us. Clearing and settlement services we connect clients trading activities to post trading market infrastructures either through a single global window or multi-direct set-up. Trade settlement needs to work efficiently and cost efficiently. Local custody key to successful post-trade processing is a partner who is at home in local market. Client can rely on deep understanding of local practices and rules. BNP Paribas securities services have launched a solution that allows our clients to anticipate liquidity requirements, leverage assert and optimise cash management.',
-                Roles:['Identifying test cases for automation.',
-                      'Understanding the requirement.',
-                      'Preparing Test scripts for Selenium WebDriver',
-                      'Good experience in Xpath on identifying objects.',
-                      'Updating framework functions when needed.',
-                      'Execution of test scripts for IE Browser testing.',
-                      'Report verification and validation.',
-                      'Review of Test Scripts and Execution Scripts',
-                      'Reviewing the test reports and preparing the Test summary reports.']
+                Roles: ['Identifying test cases for automation.',
+                  'Understanding the requirement.',
+                  'Preparing Test scripts for Selenium WebDriver',
+                  'Good experience in Xpath on identifying objects.',
+                  'Updating framework functions when needed.',
+                  'Execution of test scripts for IE Browser testing.',
+                  'Report verification and validation.',
+                  'Review of Test Scripts and Execution Scripts',
+                  'Reviewing the test reports and preparing the Test summary reports.']
               },
               {
                 title: 'CVP Arista Networks',
                 description: 'Real-time task management application with team collaboration features',
-                image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                tech: ['Selenium', 'Java', 'BDD', 'Swagger', 'Postman', 'Restassured','SVN','SonarQube', 'Jacoco'],
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/arista_je2x4e',
+                tech: ['Selenium', 'Java', 'BDD', 'Swagger', 'Postman', 'Restassured', 'SVN', 'SonarQube', 'Jacoco'],
                 projectDescription: 'Arista is the core of Arista cloud networking solutions for next-generation data centres and cloud networks Cloud architectures built with Arista EOS scale to tens of thousands of compute and storage nodes with management and provisioning capabilities that work at scale. Through its programmability, EOS enables a set of software applications that deliver workflow automation, unprecedented network visibility and analytics and rapid integration with a wide range of third-party applications for virtualization, management, automation, and orchestration services. Arista Extensible Operating System (EOS) is a fully programmable and highly modular, Linux based network operation system, using familiar industry standard CLI and runs a single binary software image across the Arista switching family. Architected for resiliency and programmability, EOS has a unique multi-process state sharing architecture that separates state information and packet forwarding from protocol processing and application logic.',
-                Roles:['Identifying test cases for automation.',
-                      'Understanding the requirement.',
-                      'Preparing Test scripts for Selenium WebDriver',
-                      'Good experience in Xpath on identifying objects.',
-                      'Updating framework functions when needed.',
-                      'Execution of test scripts for Cross Browser testing.',
-                      'Report verification and validation.',
-                      'Review of Test Scripts and Execution Scripts',
-                      'Reviewing the test reports and preparing the Test summary reports.']
+                Roles: ['Identifying test cases for automation.',
+                  'Understanding the requirement.',
+                  'Preparing Test scripts for Selenium WebDriver',
+                  'Good experience in Xpath on identifying objects.',
+                  'Updating framework functions when needed.',
+                  'Execution of test scripts for Cross Browser testing.',
+                  'Report verification and validation.',
+                  'Review of Test Scripts and Execution Scripts',
+                  'Reviewing the test reports and preparing the Test summary reports.']
               },
               {
                 title: 'CREXENDO',
                 description: 'AI-powered content generation tool using OpenAI API and React',
-                image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                tech: ['Selenium', 'Java', 'Android', 'iOS', 'Andriod Studio','Xcode','physical Devices'],
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/crexdeo_nrlwlv',
+                tech: ['Selenium', 'Java', 'Android', 'iOS', 'Andriod Studio', 'Xcode', 'physical Devices'],
                 projectDescription: 'Crexendo Video calling is an application which has ability to user can perform video calls on one to one basis with another Crexendo contact using the Crexendo application.The user can start an instant chat with other Crexendo user on one to one basis using the Crexendo application. The modules for the application like Sign Up, History, Contacts, Voice Calls, Video Calling, Instant Message and Settings.',
-                Roles:['Identifying test cases for Manual Testing.',
-                      'Understanding the requirement.',
-                      'Preparing test cases using Redmine',
-                      'Execution test script for Android and IOS mobiles using Appium.',
-                      'Automate using Real devices and emulators.',
-                      'Using Appium for mobile automation.',
-                      'Report verification and validation',
-                      'Reviewing the test Reports and Preparing test summary reports.']
+                Roles: ['Identifying test cases for Manual Testing.',
+                  'Understanding the requirement.',
+                  'Preparing test cases using Redmine',
+                  'Execution test script for Android and IOS mobiles using Appium.',
+                  'Automate using Real devices and emulators.',
+                  'Using Appium for mobile automation.',
+                  'Report verification and validation',
+                  'Reviewing the test Reports and Preparing test summary reports.']
               },
               {
                 title: 'Jovia Health Care',
                 description: 'AI-powered content generation tool using OpenAI API and React',
-                image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/arista_je2x4e',
                 tech: ['Selenium IDE', 'Java', 'Selenium Webdriver', 'Funactional Testing'],
                 projectDescription: 'Health Fleet is pioneering a new horizon in preventive healthcare and support, one that focuses on individual needs, personal interaction and results Personalized Medical Nutrition and Behavioural Therapy-based health programs Dedicated health counsellors to oversee care and progress Accessible team of cross-functional health specialists committed to each user\'s success Robust, easy-to-use online platform for secure, at-home counselling Affordable care that can scale to meet the varying needs of users Just like the health characteristics of our users, our individualized prevention programs are unique. Each one is created and implemented by a team of highly qualified, highly dedicated healthcare professionals from a range of specialties. This multi-disciplinary approach enables us to meet many user needs and create a balance of one-on-one and group counselling. Our users access their live counselling through high-definition video (or via phone) for privacy and convenience.',
-                Roles:['Identifying test cases for Manual Testing and Automation test cases.',
-                      'Understanding the requirement.',
-                      'Preparing test scripts using Selenium IDE',
-                      'Updating framework functions when needed.',
-                      'Execution test script for cross browser testing',
-                      'Report verification and validations',
-                      'Reviewing the test Reports and Preparing test summary reports']
+                Roles: ['Identifying test cases for Manual Testing and Automation test cases.',
+                  'Understanding the requirement.',
+                  'Preparing test scripts using Selenium IDE',
+                  'Updating framework functions when needed.',
+                  'Execution test script for cross browser testing',
+                  'Report verification and validations',
+                  'Reviewing the test Reports and Preparing test summary reports']
               }
             ].map((project, index) => (
               <div key={index} className="group">
                 <div className="relative overflow-hidden rounded-xl bg-black/50 backdrop-blur-sm border border-blue-500/20 hover:border-blue-500 transition-colors" onClick={() => handleProjectClick(project)}>
                   <div className="relative h-48">
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                   </div>
                   <div className="p-6">
@@ -500,7 +500,7 @@ function App() {
               ))}
             </ul>
             {/* You can add more details like roles and responsibilities here */}
-            
+
           </div>
         </div>
       )}
@@ -567,7 +567,7 @@ function App() {
 
               <div className="mb-4">
                 <input type="email" id="email" name="email" placeholder="Your Email" required value={formData.email} onChange={handleChange}
-                            className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue 500"/>
+                  className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue 500" />
               </div>
 
               <div className="mb-4">
@@ -596,12 +596,13 @@ function App() {
           </h2>
           <div className="flex items-center justify-center py-4">
             <nav className="hidden md:flex items-center justify-center space-x-8">
-              <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">About</a>
-              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
-              <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">Experience</a>
-              <a href="#education" className="hover:text-blue-500 transition-colors flex items-center gap-2">Education</a>
-              <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">Projects</a>
+              <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">Home</a>
               <a href="#skills" className="hover:text-blue-500 transition-colors flex items-center gap-2">Skills</a>
+              <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">Experience</a>
+              <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">Projects</a>
+              <a href="#education" className="hover:text-blue-500 transition-colors flex items-center gap-2">Education</a>
+              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
+
             </nav>
           </div>
 
