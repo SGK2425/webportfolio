@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node server.js"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
@@ -15,7 +16,12 @@
     "react-dom": "^18.3.1",
     "@cloudinary/react": "^1.13.0",
     "@cloudinary/url-gen": "^1.19.0",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "nodemailer": "^6.9.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "@emailjs/browser": "^3.x.x"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
