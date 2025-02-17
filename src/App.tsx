@@ -6,6 +6,39 @@ import emailjs from '@emailjs/browser';
 
 function App() {
 
+  //****************************************************************************//
+  //Active Tab Color 
+  const [activeSection, setActiveSection] = useState('about'); // State for the active section
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        { id: 'about', top: 0 },
+        { id: 'skills', top: document.getElementById('skills')?.offsetTop },
+        { id: 'experience', top: document.getElementById('experience')?.offsetTop },
+        { id: 'projects', top: document.getElementById('projects')?.offsetTop }, // If you have a 'projects' section
+        { id: 'education', top: document.getElementById('education')?.offsetTop },
+        { id: 'contact', top: document.getElementById('contact')?.offsetTop },
+      ];
+
+      // Calculate the current active section based on scroll position
+      let currentSection = 'about'; // Default to 'about'
+      for (let i = sections.length - 1; i >= 0; i--) {
+        if (window.scrollY >= (sections[i].top || 0)) {
+          currentSection = sections[i].id;
+          break;
+        }
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  },);
+
+  //****************************************************************************//
+  // Scroll page
   const [selectedProject, setSelectedProject] = useState<any>(null); // State for the selected project
 
   const handleProjectClick = (project: any) => {
@@ -58,6 +91,8 @@ function App() {
     };
   },);
 
+  //****************************************************************************//
+  //Type script Messages
   const el = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -75,7 +110,8 @@ function App() {
     }
   }, []);
 
-
+  //****************************************************************************//
+  //Sending EMail
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -117,19 +153,19 @@ function App() {
           <div className="flex justify-between items-center py-4">
             <a href="#" className="text-2xl font-bold text-blue-500">JD</a>
             <div className="hidden md:flex space-x-8">
-              <a href="#about" className="hover:text-blue-500 transition-colors flex items-center gap-2">Home</a>
-              <a href="#skills" className="hover:text-blue-500 transition-colors flex items-center gap-2">Skills</a>
-              <a href="#experience" className="hover:text-blue-500 transition-colors flex items-center gap-2">Experience</a>
-              <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">Projects</a>
-              <a href="#education" className="hover:text-blue-500 transition-colors flex items-center gap-2">Education</a>
-              <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
+              <a href="#about" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'about' ? 'text-blue-500' : 'text-white'}`}>Home</a>
+              <a href="#skills" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'skills' ? 'text-blue-500' : 'text-white'}`} >Skills</a>
+              <a href="#experience" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'experience' ? 'text-blue-500' : 'text-white'}`}>Experience</a>
+              <a href="#projects" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'projects' ? 'text-blue-500' : 'text-white'}`}>Projects</a>
+              <a href="#education" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'education' ? 'text-blue-500' : 'text-white'}`}>Education</a>
+              <a href="#contact" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'contact' ? 'text-blue-500' : 'text-white'}`}>Contact</a>
             </div>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1lNp_x__gt506XGlvE9Hrk4w2GRTo2oqA/view" target="_blank"
               className="hidden md:flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors"
             >
               <FileText className="w-4 h-4" />
-              GIT
+              Cover Latter
             </a>
           </div>
         </div>
@@ -152,7 +188,7 @@ function App() {
                 <div className="text-left md:text-left text-gray-300 leading-relaxed">
                   <p>A skilled Automation Architect Engineer with a strong portfolio of Framework development and test scripts demonstrating proficiency in Selenium, Appium, and API testing. Passionate about staying current with the latest automation testing frameworks and methodologies, Thrives in dynamic teams, contributing creative solutions for test automation challenges and exploring innovative approaches to improve test coverage and reduce testing time.</p>
                   <div className="flex flex-wrap gap-4 justify-start mt-4">
-                    <a href="https://drive.google.com/file/d/1-xWqgHeiL3AyqCtxsIGqjaSPNZ_PXQnZ/view" className="resumebutton" target="_blank">Check Resume</a>
+                    <a href="https://drive.google.com/file/d/1zNnamWCiK2iZZ9WUxQunCE24oIpMyteE/view" className="resumebutton" target="_blank">Check Resume</a>
                   </div>
                 </div>
               </div>
