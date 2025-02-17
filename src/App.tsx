@@ -16,7 +16,7 @@ function App() {
         { id: 'about', top: 0 },
         { id: 'skills', top: document.getElementById('skills')?.offsetTop },
         { id: 'experience', top: document.getElementById('experience')?.offsetTop },
-        { id: 'projects', top: document.getElementById('projects')?.offsetTop }, // If you have a 'projects' section
+        { id: 'projects', top: document.getElementById('projects')?.offsetTop },
         { id: 'education', top: document.getElementById('education')?.offsetTop },
         { id: 'contact', top: document.getElementById('contact')?.offsetTop },
       ];
@@ -303,8 +303,9 @@ function App() {
                 role: 'Associate Test Manager',
                 period: 'Sep 2021 - Present',
                 description: [
-                  'Led development of multiple high-impact projects',
-                  'Mentored junior developers and conducted code reviews',
+                  'Involved on framework development and updating framework',
+                  'Design,Develop,Execute,Maintain Automated test scripts',
+                  'Mentored junior Automation Tester\'s and conducted code reviews',
                   'Implemented CI/CD pipelines and improved deployment processes'
                 ]
               },
@@ -313,9 +314,10 @@ function App() {
                 role: 'Test Lead',
                 period: 'Dec 2019 - Sep 2021',
                 description: [
-                  'Developed and maintained various web applications',
-                  'Implemented responsive designs and improved UX',
-                  'Worked with agile methodologies in a fast-paced environment'
+                  'Framework development and updating framework',
+                  'Design,Develop,Execute,Maintain Automated test scripts',
+                  'Handled multiple applications simultaneously with a limited time frame.',
+                  'Worked with development team to ensure testing issues are resolved.'
                 ]
               },
               {
@@ -323,9 +325,10 @@ function App() {
                 role: 'System Analyst',
                 period: 'Jan 2018 - Dec 2019',
                 description: [
-                  'Developed and maintained various web applications',
-                  'Implemented responsive designs and improved UX',
-                  'Worked with agile methodologies in a fast-paced environment'
+                  'Framework development and updating framework',
+                  'Design,Develop,Execute,Maintain Automated test scripts',
+                  'Data validation using Excel and VB script macros to validate hug data check',
+                  'Prepared WSR and DSR and shared the same to the onsite counterpart.'
                 ]
               },
               {
@@ -333,9 +336,10 @@ function App() {
                 role: 'Senior Test Engineer',
                 period: 'Dec 2014 - Nov 2017',
                 description: [
-                  'Developed and maintained various web applications',
-                  'Implemented responsive designs and improved UX',
-                  'Worked with agile methodologies in a fast-paced environment'
+                  'Fully involved on framework development ',
+                  'Design,Develop,Execute,Maintain Automated test scripts',
+                  'Bug reporting, Retesting and closure of the bugs upon bug fix.',
+                  'Extensively involved in providing functional training to new team members.'
                 ]
               },
               {
@@ -343,9 +347,9 @@ function App() {
                 role: 'Software Developer',
                 period: 'Jan 2013 - Dec 2014',
                 description: [
-                  'Developed and maintained various web applications',
-                  'Implemented responsive designs and improved UX',
-                  'Worked with agile methodologies in a fast-paced environment'
+                  'Involved in the preparation of Test Scenarios',
+                  'Test Cases & Test execution for various levels of testing like Functional and Regression Testing.',
+                  'Develop and Execute,Maintain Automated test scripts',
                 ]
               }
             ].map((job, index) => (
