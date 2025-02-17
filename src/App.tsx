@@ -417,7 +417,7 @@ function App() {
               },
               {
                 title: 'RF360 Qualcomm',
-                description: 'AI-powered content generation tool using OpenAI API and React',
+                description: 'AR stock tool is generated only for China, Singapore and Germany employees who are eligible for stock rating.',
                 image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/rf_woji4c',
                 tech: ['Selenium', 'Java', 'BDD', 'Mobile Automation', 'Postman', 'Restassured', 'GIT'],
                 projectDescription: 'AR Stock tool which is custom application for RF360 all entities and RFFE Germany employees. This tool is mainly deployed for provide that the AR stock and promotion stock who are eligible in annual review process. Only for who has QUALCOMM ids can access this tool. Manager and Above roles can view/Edit the stock rating, Promotion and generating the stock reward statement for the employees. The AR stock tool is generated only for China, Singapore and Germany employees who are eligible for stock rating.',
@@ -432,7 +432,7 @@ function App() {
               },
               {
                 title: 'NeoLink BNP Paribas',
-                description: 'A full-featured e-commerce platform built with React, Node.js, and PostgreSQL',
+                description: 'Neo-Link offering allows clients to trade all electronic securities across over 90 markets worldwide',
                 image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/neolink_i94ybi',
                 tech: ['Selenium', 'Java', 'BDD', 'Postman', 'Restassured', 'SVN'],
                 projectDescription: 'Using Neo-Link Application Global execution offering allows clients to trade all electronic securities across over 90 markets worldwide. They simply execute trades through one of our execution to custody partners and leave the rest to us. Clearing and settlement services we connect clients trading activities to post trading market infrastructures either through a single global window or multi-direct set-up. Trade settlement needs to work efficiently and cost efficiently. Local custody key to successful post-trade processing is a partner who is at home in local market. Client can rely on deep understanding of local practices and rules. BNP Paribas securities services have launched a solution that allows our clients to anticipate liquidity requirements, leverage assert and optimise cash management.',
@@ -448,7 +448,7 @@ function App() {
               },
               {
                 title: 'CVP Arista Networks',
-                description: 'Real-time task management application with team collaboration features',
+                description: 'Arista is the core of Arista cloud networking solutions for next-generation data',
                 image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/arista_je2x4e',
                 tech: ['Selenium', 'Java', 'BDD', 'Swagger', 'Postman', 'Restassured', 'SVN', 'SonarQube', 'Jacoco'],
                 projectDescription: 'Arista is the core of Arista cloud networking solutions for next-generation data centres and cloud networks Cloud architectures built with Arista EOS scale to tens of thousands of compute and storage nodes with management and provisioning capabilities that work at scale. Through its programmability, EOS enables a set of software applications that deliver workflow automation, unprecedented network visibility and analytics and rapid integration with a wide range of third-party applications for virtualization, management, automation, and orchestration services. Arista Extensible Operating System (EOS) is a fully programmable and highly modular, Linux based network operation system, using familiar industry standard CLI and runs a single binary software image across the Arista switching family. Architected for resiliency and programmability, EOS has a unique multi-process state sharing architecture that separates state information and packet forwarding from protocol processing and application logic.',
@@ -464,7 +464,7 @@ function App() {
               },
               {
                 title: 'CREXENDO',
-                description: 'AI-powered content generation tool using OpenAI API and React',
+                description: 'Crexendo Chat & Video calling is an application',
                 image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/crexdeo_nrlwlv',
                 tech: ['Selenium', 'Java', 'Android', 'iOS', 'Andriod Studio', 'Xcode', 'physical Devices'],
                 projectDescription: 'Crexendo Video calling is an application which has ability to user can perform video calls on one to one basis with another Crexendo contact using the Crexendo application.The user can start an instant chat with other Crexendo user on one to one basis using the Crexendo application. The modules for the application like Sign Up, History, Contacts, Voice Calls, Video Calling, Instant Message and Settings.',
@@ -479,7 +479,7 @@ function App() {
               },
               {
                 title: 'Jovia Health Care',
-                description: 'AI-powered content generation tool using OpenAI API and React',
+                description: 'Health Fleet is pioneering a new horizon in preventive healthcare and support',
                 image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/healthFeet_gqklwa',
                 tech: ['Selenium IDE', 'Java', 'Selenium Webdriver', 'Funactional Testing'],
                 projectDescription: 'Health Fleet is pioneering a new horizon in preventive healthcare and support, one that focuses on individual needs, personal interaction and results Personalized Medical Nutrition and Behavioural Therapy-based health programs Dedicated health counsellors to oversee care and progress Accessible team of cross-functional health specialists committed to each user\'s success Robust, easy-to-use online platform for secure, at-home counselling Affordable care that can scale to meet the varying needs of users Just like the health characteristics of our users, our individualized prevention programs are unique. Each one is created and implemented by a team of highly qualified, highly dedicated healthcare professionals from a range of specialties. This multi-disciplinary approach enables us to meet many user needs and create a balance of one-on-one and group counselling. Our users access their live counselling through high-definition video (or via phone) for privacy and convenience.',
