@@ -540,7 +540,6 @@ function App() {
               ))}
             </ul>
             {/* You can add more details like roles and responsibilities here */}
-
           </div>
         </div>
       )}
@@ -571,7 +570,7 @@ function App() {
                 description: "I've embraced a dynamic academic journey. My studies have fostered critical thinking and a thirst for knowledge. Through my dedication and adaptability, I've honed essential skills that transcend disciplines, preparing me for future challenges and opportunities."
               },
               {
-                institution: 'VISWAM HIGH SCHOOL',
+                institution: 'Viswam High School',
                 university: 'Board Of Secondary Education, Andhra Pradesh',
                 degree: 'SSC - Xth',
                 period: '2005-2006',
@@ -667,9 +666,7 @@ function App() {
       {/* Scroll Section */}
 
       <div>
-
         {/* Scroll to Top Button */}
-
         {isVisible && (
           <div className="fixed bottom-20 right-8 z-50">
             <button onClick={scrollToTop} className="scrollLevel mb-2" aria-label="Scroll to top">
@@ -688,7 +685,6 @@ function App() {
         )}
 
       </div>
-
 
     </div>
   );
