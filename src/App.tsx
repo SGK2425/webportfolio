@@ -7,6 +7,29 @@ import emailjs from '@emailjs/browser';
 function App() {
 
   //****************************************************************************//
+  //modal ScrollTop 
+  const [modalScrollTop, setModalScrollTop] = useState(0); // Store scroll position
+
+  const handleProjectClick = (project: any) => {
+    setModalScrollTop(window.pageYOffset); // Capture current scroll position
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    document.body.style.overflow = 'auto'; // Re-enable background scrolling
+    window.scrollTo(0, modalScrollTop); // Restore scroll position
+    setSelectedProject(null);
+  };
+
+  useEffect(() => {
+    // Cleanup: Re-enable scrolling if component unmounts while modal is open
+    return () => {
+      document.body.style.overflow = 'auto';
+    }
+  }, []);
+
+  //****************************************************************************//
   //Active Tab Color 
   const [activeSection, setActiveSection] = useState('about'); // State for the active section
 
@@ -40,14 +63,6 @@ function App() {
   //****************************************************************************//
   // Scroll page
   const [selectedProject, setSelectedProject] = useState<any>(null); // State for the selected project
-
-  const handleProjectClick = (project: any) => {
-    setSelectedProject(project);
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-  };
 
   const [isVisible, setIsVisible] = useState(false);
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -98,7 +113,7 @@ function App() {
   useEffect(() => {
     if (el.current) {
       const typed = new Typed(el.current, {
-        strings: ["Frontend Automation", "Backend Automation", "Mobile Automation", "Macros Automation"],
+        strings: ["Frontend Automation Eng", "Backend Automation Eng.", "Mobile Automation Eng.", "Macros Automation Eng."],
         typeSpeed: 150,
         backSpeed: 150,
         loop: true
@@ -204,7 +219,6 @@ function App() {
           </div>
         </div>
       </header>
-
 
       {/* Skill Section */}
       <section className="py-20 relative" id="skills">
@@ -387,10 +401,10 @@ function App() {
             {[
               {
                 title: 'Aladdin Blackrock',
-                description: 'A full-featured e-commerce platform built with React, Node.js, and PostgreSQL',
+                description: 'Aladdin target management management platform, scalable portfolio monitoring and rebalancing, and specialized for model portfolio managers',
                 image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/br_r4konf',
                 tech: ['Cypress', 'JavaScript', 'BDD', 'Spring boot', 'API Testing', 'Postman', 'GIT'],
-                projectDescription: 'testing',
+                projectDescription: 'BlackRock Aladdin PM remains the industry leader in portfolio management it amis to deliver persona-centered workflow and hogh scale portfolio management. The platform simplifies complex portfolio management challenges with intuitive user experience and modular building blocks. Aladdin target management management platform, scalable portfolio monitoring and rebalancing, and specialized for model portfolio managers',
                 Roles: ['Understanding the requirement.',
                   'Identifying test cases for Functional and Automation.',
                   'Preparing Test scripts for Cypress, Appium and API Testing',
@@ -525,25 +539,24 @@ function App() {
       {/* Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-md">
-          <div className="bg-gray-900 p-8 rounded-lg max-w-3xl relative">
-            <button className="absolute top-3 right-3 text-gray-400 hover:text-gray-200" onClick={closeModal} aria-label="Close Modal">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="bg-gray-900 p-4 rounded-lg relative overflow-y-auto max-h-[90vh] w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl">
+            <button className="absolute top-3 right-3 text-gray-400 hover:text-gray-200 focus:outline-none rounded-lg bg-blue-600" onClick={closeModal} aria-label="Close Modal">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
+            <img src={selectedProject.image} className="w-full h-auto object-cover mb-4" alt={selectedProject.title} /> {/* Added alt attribute */}
             <h2 className="project-title">{selectedProject.title}</h2>
             <p className="text-gray-300 mb-6">{selectedProject.projectDescription}</p>
             <h3 className="project-title">Roles & Responsibility:</h3>
             <ul className="list-disc list-inside text-gray-300">
-              {selectedProject.Roles.map((Roles: string, index: number) => (
-                <li key={index}>{Roles}</li>
+              {selectedProject.Roles.map((role, index) => ( // Corrected variable name to 'role'
+                <li key={index}>{role}</li>
               ))}
             </ul>
-            {/* You can add more details like roles and responsibilities here */}
           </div>
         </div>
       )}
-
 
       {/* Education Section */}
       <section className="py-20 relative" id="education">
@@ -641,7 +654,6 @@ function App() {
               <a href="#projects" className="hover:text-blue-500 transition-colors flex items-center gap-2">Projects</a>
               <a href="#education" className="hover:text-blue-500 transition-colors flex items-center gap-2">Education</a>
               <a href="#contact" className="hover:text-blue-500 transition-colors flex items-center gap-2">Contact</a>
-
             </nav>
           </div>
 
