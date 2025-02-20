@@ -416,10 +416,10 @@ function App() {
               },
               {
                 title: 'Morgan Stanley',
-                description: 'Real-time task management application with team collaboration features',
+                description: 'Interactions with accounts, measure the adoption of diverse products and online offerings for clients',
                 image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/ms_k6wflg',
                 tech: ['Selenium', 'Java', 'BDD', 'Macros', 'VB Script', 'Fast Framework', 'GIT'],
-                projectDescription: '',
+                projectDescription: 'Field Management Business Service is a team dedicated to creating applications and systems that monitor financial advisors\' interactions with accounts, measure the adoption of diverse products and online offerings for clients, and compute compensation and rewards accordingly.',
                 Roles: ['Understanding the requirement.',
                   'Identifying test cases for Functional and Automation.',
                   'Preparing Test scripts for Selenium WebDriver, Appium and API Testing',
@@ -544,8 +544,7 @@ function App() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
-            </button>
-            <img src={selectedProject.image} className="w-full h-auto object-cover mb-4" alt={selectedProject.title} /> {/* Added alt attribute */}
+            </button>            
             <h2 className="project-title">{selectedProject.title}</h2>
             <p className="text-gray-300 mb-6">{selectedProject.projectDescription}</p>
             <h3 className="project-title">Roles & Responsibility:</h3>
@@ -618,20 +617,20 @@ function App() {
               <div className="text-3xl font-bold mb-6">Email Me 🚀</div>
 
               <div className="mb-4">
-                <input type="email" id="email" name="email" placeholder="Your Email" required value={formData.email} onChange={handleChange}
+                <input type="email" id="email" name="email" placeholder="Your Email *" required value={formData.email} onChange={handleChange}
                   className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue 500" />
               </div>
 
               <div className="mb-4">
-                <input type="text" id="name" name="name" placeholder="Your Name" required value={formData.name} onChange={handleChange} className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="text" id="name" name="name" placeholder="Your Name *" required value={formData.name} onChange={handleChange} className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
 
               <div className="mb-4">
-                <input type="text" id="subject" name="subject" placeholder="Subject" required value={formData.subject} onChange={handleChange} className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="text" id="subject" name="subject" placeholder="Subject *" required value={formData.subject} onChange={handleChange} className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
 
               <div className="mb-6">
-                <textarea id="message" name="message" placeholder="Message" rows={4} required value={formData.message} onChange={handleChange} className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+                <textarea id="message" name="message" placeholder="Message *" rows={4} required value={formData.message} onChange={handleChange} className="w-full px-3 py-2 border rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
               </div>
 
               <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors">Send Message</button>
