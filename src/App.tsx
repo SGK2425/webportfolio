@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail, ExternalLink, Code2, Briefcase, User, ChevronDo
 import Whatsapp from './Whatsapp';
 import Typed from 'typed.js';
 import emailjs from '@emailjs/browser';
+import TstLogo from './TstLogo';
 
 function App() {
 
@@ -166,7 +167,10 @@ function App() {
       <nav className="fixed w-full bg-black/50 backdrop-blur-sm z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
-            <a href="#" className="text-2xl font-bold text-blue-500">JD</a>
+            <a href="#" className="flex items-center transition-colors duration-300 hover:text-blue-500 ">
+              <TstLogo color="white" height="3rem"/> {/* Pass props for color and size */}
+              <span className="text-2xl font-bold text-blue-500 text-white samplecolor">Tstfolio</span>
+            </a>
             <div className="hidden md:flex space-x-8">
               <a href="#about" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'about' ? 'text-blue-500' : 'text-white'}`}>Home</a>
               <a href="#skills" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'skills' ? 'text-blue-500' : 'text-white'}`} >Skills</a>
@@ -175,10 +179,8 @@ function App() {
               <a href="#education" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'education' ? 'text-blue-500' : 'text-white'}`}>Education</a>
               <a href="#contact" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'contact' ? 'text-blue-500' : 'text-white'}`}>Contact</a>
             </div>
-            <a
-              href="https://drive.google.com/file/d/1lNp_x__gt506XGlvE9Hrk4w2GRTo2oqA/view" target="_blank"
-              className="hidden md:flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors"
-            >
+            <a href="https://drive.google.com/file/d/1lNp_x__gt506XGlvE9Hrk4w2GRTo2oqA/view" target="_blank"
+              className="coverbutton">
               <FileText className="w-4 h-4" />
               Cover Latter
             </a>
@@ -544,7 +546,7 @@ function App() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
-            </button>            
+            </button>
             <h2 className="project-title">{selectedProject.title}</h2>
             <p className="text-gray-300 mb-6">{selectedProject.projectDescription}</p>
             <h3 className="project-title">Roles & Responsibility:</h3>
