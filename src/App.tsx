@@ -172,12 +172,12 @@ function App() {
               <span className="text-2xl font-bold text-blue-500 text-white samplecolor">Tstfolio</span>
             </a>
             <div className="hidden md:flex space-x-8">
-              <a href="#about" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'about' ? 'text-blue-500' : 'text-white'}`}>Home</a>
-              <a href="#skills" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'skills' ? 'text-blue-500' : 'text-white'}`} >Skills</a>
-              <a href="#experience" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'experience' ? 'text-blue-500' : 'text-white'}`}>Experience</a>
-              <a href="#projects" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'projects' ? 'text-blue-500' : 'text-white'}`}>Projects</a>
-              <a href="#education" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'education' ? 'text-blue-500' : 'text-white'}`}>Education</a>
-              <a href="#contact" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'contact' ? 'text-blue-500' : 'text-white'}`}>Contact</a>
+              <a href="#about" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'about' ? 'samplecolor' : 'text-white'}`}>Home</a>
+              <a href="#skills" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'skills' ? 'samplecolor' : 'text-white'}`} >Skills</a>
+              <a href="#experience" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'experience' ? 'samplecolor' : 'text-white'}`}>Experience</a>
+              <a href="#projects" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'projects' ? 'samplecolor' : 'text-white'}`}>Projects</a>
+              <a href="#education" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'education' ? 'samplecolor' : 'text-white'}`}>Education</a>
+              <a href="#contact" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'contact' ? 'samplecolor' : 'text-white'}`}>Contact</a>
             </div>
             <a href="https://drive.google.com/file/d/1lNp_x__gt506XGlvE9Hrk4w2GRTo2oqA/view" target="_blank"
               className="coverbutton">
