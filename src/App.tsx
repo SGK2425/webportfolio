@@ -210,7 +210,7 @@ function App() {
                 </div>
               </div>
               <div className="md:w-1/2 pr-4 mt-8 md:mt-0 flex justify-center">
-                <div className="mb-8 relative">
+                <div className="mb-8 relative myprofilecontainer">
                   <div className="rounded-full overflow-hidden w-[27rem] h-[27rem] border-4 border-blue-500 myprofileimg">
                     <img src="https://res.cloudinary.com/do3edwdc3/image/upload/v1/MyProfile4_lo5i6o" alt="Profile" className="w-full h-full object-cover" />
                   </div>
