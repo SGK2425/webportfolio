@@ -101,4 +101,9 @@ a[type="submit"] {
   @apply bg-gradient-to-r text-transparent from-blue-400 to-purple-500 text-white hidden md:flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors
 }
 
-
+@media only screen and (max-width: 470px){
+  .myprofileimg{
+     height: 300px;
+     width: 300px; 
+  }
+}
