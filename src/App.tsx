@@ -405,8 +405,8 @@ function App() {
               {
                 title: 'HSBC Custody',
                 description: 'Aladdin target management management platform, scalable portfolio monitoring and rebalancing, and specialized for model portfolio managers',
-                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/br_r4konf',
-                tech: ['Cypress', 'JavaScript', 'BDD', 'Spring boot', 'API Testing', 'Postman', 'GIT'],
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/HSBC_gudnm2',
+                tech: ['Playwright', 'Python', 'TCS bancs', 'Postman', 'GIT','VB Script'],
                 projectDescription: 'BlackRock Aladdin PM remains the industry leader in portfolio management it amis to deliver persona-centered workflow and hogh scale portfolio management. The platform simplifies complex portfolio management challenges with intuitive user experience and modular building blocks. Aladdin target management management platform, scalable portfolio monitoring and rebalancing, and specialized for model portfolio managers',
                 Roles: ['Understanding the requirement.',
                   'Identifying test cases for Functional and Automation.',
