@@ -240,6 +240,8 @@ function App() {
                     { name: 'Selenium IDE', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/selenium_IDE_xmwevu' },
                     { name: 'Cucumber', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/cucumber_viz2dt' },
                     { name: 'Java', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/java_rddnmg' },
+                    { name: 'Playwright', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/playwright1_vpeyoy' },
+                    { name: 'Python', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/Python_zx7dme' },
                     { name: 'Postman', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/postman_n7bktn' },
                     { name: 'Restassured', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/Restassured_j9rpqd' },
                     { name: 'Swagger', image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/Swagger-logo_d4edzw' },
