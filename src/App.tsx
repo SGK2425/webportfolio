@@ -403,6 +403,23 @@ function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
+                title: 'HSBC Custody',
+                description: 'Aladdin target management management platform, scalable portfolio monitoring and rebalancing, and specialized for model portfolio managers',
+                image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/br_r4konf',
+                tech: ['Cypress', 'JavaScript', 'BDD', 'Spring boot', 'API Testing', 'Postman', 'GIT'],
+                projectDescription: 'BlackRock Aladdin PM remains the industry leader in portfolio management it amis to deliver persona-centered workflow and hogh scale portfolio management. The platform simplifies complex portfolio management challenges with intuitive user experience and modular building blocks. Aladdin target management management platform, scalable portfolio monitoring and rebalancing, and specialized for model portfolio managers',
+                Roles: ['Understanding the requirement.',
+                  'Identifying test cases for Functional and Automation.',
+                  'Preparing Test scripts for PlayWright, and Python',
+                  'Created framework & functions when needed.',
+                  'Prepating estimation for country wise testing',
+                  'Generating files for TCS bancs validation',
+                  'Execution of test scripts for cross Browser testing and Devices.',
+                  'Report verification and validation.',
+                  'Review of Test Scripts and Execution Scripts',
+                  'Reviewing the test reports and preparing the Test summary reports.']
+              },
+              {
                 title: 'Aladdin Blackrock',
                 description: 'Aladdin target management management platform, scalable portfolio monitoring and rebalancing, and specialized for model portfolio managers',
                 image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/br_r4konf',
