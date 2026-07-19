@@ -179,7 +179,7 @@ function App() {
               <a href="#education" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'education' ? 'samplecolor' : 'text-white'}`}>Education</a>
               <a href="#contact" className={`hover:text-blue-500 transition-colors flex items-center font-bold gap-2 ${activeSection === 'contact' ? 'samplecolor' : 'text-white'}`}>Contact</a>
             </div>
-            <a href="https://drive.google.com/file/d/1lNp_x__gt506XGlvE9Hrk4w2GRTo2oqA/view" target="_blank"
+            <a href="https://drive.google.com/file/d/1-B6b02K5RFaYJL75HImf-bwk0PGXUXFY/view?usp=drivesdk" target="_blank"
               className="coverbutton">
               <FileText className="w-4 h-4" />
               Cover Latter
@@ -205,7 +205,7 @@ function App() {
                 <div className="text-left md:text-left text-gray-300 leading-relaxed">
                   <p>A skilled Automation Architect Engineer with a strong portfolio of Framework development and test scripts demonstrating proficiency in Selenium, Appium, and API testing. Passionate about staying current with the latest automation testing frameworks and methodologies, Thrives in dynamic teams, contributing creative solutions for test automation challenges and exploring innovative approaches to improve test coverage and reduce testing time.</p>
                   <div className="flex flex-wrap gap-4 justify-start mt-4">
-                    <a href="https://drive.google.com/file/d/1zNnamWCiK2iZZ9WUxQunCE24oIpMyteE/view" className="resumebutton" target="_blank">Check Resume</a>
+                    <a href="https://drive.google.com/file/d/1gyNSI0wiEbzhff0cqiCEAkVdewkNmM90/view?usp=drivesdk" className="resumebutton" target="_blank">Check Resume</a>
                   </div>
                 </div>
               </div>
