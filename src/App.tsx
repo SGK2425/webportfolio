@@ -321,11 +321,24 @@ function App() {
                 role: 'Associate Test Manager',
                 period: 'Sep 2021 - Present',
                 description: [
-                  'Involved on framework development and updating framework',
-                  'Design,Develop,Execute,Maintain Automated test scripts',
-                  'Mentored junior Automation Tester\'s and conducted code reviews',
-                  'Implemented CI/CD pipelines and improved deployment processes',
-                  'Assisting with campus recruitment and organizing interview drives'
+                  'Led end-to-end Quality Assurance and Test Automation initiatives across multiple enterprise applications and Agile delivery teams.',
+                  'Defined test strategy, test approach, quality standards, and release validation plans to ensure successful project delivery.',
+                  'Collaborated with Business Analysts, Product Owners, Architects, Developers, and Stakeholders to translate business requirements into effective testing solutions.',
+                  'Managed test planning, effort estimation, resource allocation, risk assessment, and release readiness activities across multiple projects.',
+                  'Drove automation transformation initiatives by designing and implementing scalable automation frameworks for Web, Mobile, API, and Regression testing.',
+                  'Established QA governance, quality metrics, KPIs, and testing best practices to improve overall testing maturity and delivery excellence.',
+                  'Integrated automation frameworks with CI/CD pipelines to enable Continuous Testing and accelerate software release cycles.',
+                  'Monitored project quality metrics, defect trends, automation coverage, and testing progress, providing actionable insights to stakeholders.',
+                  'Led defect triage discussions, root cause analysis sessions, and quality review meetings to ensure timely resolution of critical issues.',
+                  'Acted as the primary liaison between clients, business teams, and technology teams, providing regular project status updates and quality reports.',
+                  'Mentored QA engineers, automation testers, and newly onboarded team members through coaching, knowledge transfers, and technical training programs.',
+                  'Conducted technical interviews for campus and off-campus hiring initiatives, evaluating candidates and contributing to talent acquisition efforts.',
+                  'Facilitated cross-functional collaboration between manual testing, automation, development, DevOps, and business teams to improve delivery efficiency.',
+                  'Evaluated emerging technologies, automation tools, and AI-assisted testing solutions to drive innovation and continuous improvement.',
+                  'Managed project governance activities, including SOP maintenance, KPI reporting, audit compliance, quality reviews, and process improvements.',
+                  'Supported release management activities and provided Go/No-Go recommendations based on testing outcomes, quality metrics, and business readiness.',
+                  'Fostered a quality-first culture by promoting automation adoption, continuous learning, innovation, and operational excellence within the organization.',
+                  'Actively contributed to talent acquisition initiatives by evaluating candidates in campus and off-campus recruitment drives, helping identify and onboard high-quality talent.'
                 ]
               },
               {
@@ -333,10 +346,24 @@ function App() {
                 role: 'Test Lead',
                 period: 'Dec 2019 - Sep 2021',
                 description: [
-                  'Framework development and updating framework',
-                  'Design,Develop,Execute,Maintain Automated test scripts',
-                  'Handled multiple applications simultaneously with a limited time frame.',
-                  'Worked with development team to ensure testing issues are resolved.'
+                  'Led a team of QA engineers and automation testers, ensuring successful delivery of testing activities across multiple project releases.',
+                  'Collaborated with Business Analysts, Product Owners, and Development Teams to analyze requirements, define test strategies, and ensure comprehensive test coverage.',
+                  'Planned, estimated, and coordinated testing efforts, including resource allocation, sprint planning, and release execution activities.',
+                  'Designed and implemented robust test automation frameworks using Selenium WebDriver, TestNG, BDD Cucumber, and supporting automation tools.',
+                  'Developed and maintained automated test suites for Functional, Regression, Integration, and End-to-End testing scenarios.',
+                  'Integrated automation frameworks with CI/CD pipelines using Jenkins to support Continuous Integration and Continuous Testing practices.',
+                  'Led defect triage meetings, performed root cause analysis, and collaborated with development teams to ensure timely defect resolution.',
+                  'Established testing standards, automation best practices, reusable components, and coding guidelines to improve framework maintainability.',
+                  'Monitored test execution progress, automation coverage, defect metrics, and quality KPIs, providing regular status reports to stakeholders.',
+                  'Participated in Agile ceremonies including Sprint Planning, Daily Stand-ups, Sprint Reviews, Retrospectives, and Release Planning sessions.',
+                  'Coordinated closely with cross-functional teams including Development, Product Management, DevOps, and Client Stakeholders to ensure successful project delivery.',
+                  'Conducted peer reviews of test cases, test scripts, and automation code to maintain quality and compliance standards.',
+                  'Mentored junior team members and provided technical guidance on automation tools, testing methodologies, and framework development.',
+                  'Supported mobile and API testing initiatives to ensure end-to-end validation of business-critical applications.',
+                  'Contributed to continuous improvement initiatives by identifying opportunities for process optimization, automation enhancement, and productivity improvements.',
+                  'Prepared and presented test execution reports, quality metrics, risk assessments, and release readiness updates to project leadership and clients.',
+                  'Ensured adherence to organizational quality standards, testing processes, and delivery timelines throughout the project lifecycle.',
+                  'Actively contributed to talent acquisition initiatives by evaluating candidates in campus and off-campus recruitment drives, helping identify and onboard high-quality talent.'
                 ]
               },
               {
@@ -344,10 +371,23 @@ function App() {
                 role: 'System Analyst',
                 period: 'Jan 2018 - Dec 2019',
                 description: [
-                  'Framework development and updating framework',
-                  'Design,Develop,Execute,Maintain Automated test scripts',
-                  'Data validation using Excel and VB script macros to validate hug data check',
-                  'Prepared WSR and DSR and shared the same to the onsite counterpart.'
+                  'Analyzed business requirements, functional specifications, and user stories to identify test scenarios, test cases, and test data requirements.',
+                  'Collaborated with Business Analysts, Product Owners, and Development Teams to ensure accurate requirement interpretation and complete test coverage.',
+                  'Participated in Agile Scrum ceremonies including Sprint Planning, Daily Stand-ups, Sprint Reviews, and Retrospectives.',
+                  'Designed, developed, and maintained automation test scripts using Selenium WebDriver, TestNG, and supporting automation frameworks.',
+                  'Developed reusable automation components and framework utilities to improve test maintainability and execution efficiency.',
+                  'Executed Functional, Regression, Integration, System, and End-to-End testing across multiple application releases.',
+                  'Performed API testing and validation using tools such as Postman and REST-based services to verify application functionality and data integrity.',
+                  'Conducted cross-browser testing to ensure application compatibility and consistent user experience across supported platforms.',
+                  'Collaborated with developers to analyze defects, validate bug fixes, and perform impact analysis for production and release issues.',
+                  'Created and maintained test plans, test cases, test execution reports, defect reports, and quality metrics documentation.',
+                  'Supported Continuous Integration efforts by integrating automated test suites into build and deployment processes.',
+                  'Reviewed automation scripts and test artifacts to ensure adherence to testing standards and coding best practices.',
+                  'Participated in defect triage meetings and worked closely with cross-functional teams to prioritize and resolve critical issues.',
+                  'Contributed to framework enhancements and process improvement initiatives to increase automation coverage and testing efficiency.',
+                  'Provided regular status updates, testing progress reports, and quality insights to project stakeholders and management teams.',
+                  'Assisted in knowledge-sharing activities and mentored junior team members on automation tools, testing methodologies, and project processes.',
+                  'Ensured compliance with organizational quality standards, testing procedures, and release management guidelines.'
                 ]
               },
               {
@@ -355,10 +395,26 @@ function App() {
                 role: 'Senior Test Engineer',
                 period: 'Dec 2014 - Nov 2017',
                 description: [
-                  'Fully involved on framework development ',
-                  'Design,Develop,Execute,Maintain Automated test scripts',
-                  'Bug reporting, Retesting and closure of the bugs upon bug fix.',
-                  'Extensively involved in providing functional training to new team members.'
+                  'Analyzed business requirements, functional specifications, and user stories to develop comprehensive test scenarios and test cases.',
+                  'Designed, developed, and maintained automated test scripts using Selenium WebDriver and TestNG frameworks for web-based applications.',
+                  'Performed Functional, Smoke, Sanity, Regression, System, and End-to-End testing to ensure application quality and stability.',
+                  'Developed reusable automation components and enhanced existing frameworks to improve maintainability and execution efficiency.',
+                  'Executed cross-browser and cross-platform testing to validate application behavior across multiple environments.',
+                  'Participated in requirement review sessions and collaborated with business and development teams to clarify functionality and testing expectations.',
+                  'Performed mobile application testing and validation to ensure seamless user experience and application reliability.',
+                  'Conducted API testing and backend validation using industry-standard tools and methodologies.',
+                  'Identified, logged, tracked, and verified defects using defect management tools, ensuring timely resolution and retesting.',
+                  'Worked closely with developers to perform root cause analysis and validate defect fixes.',
+                  'Prepared and maintained test plans, test cases, test execution reports, and defect summary reports.',
+                  'Executed automation test suites and analyzed test results to identify application risks and quality concerns.',
+                  'Participated in Agile Scrum activities, including Daily Stand-ups, Sprint Reviews, and Retrospectives.',
+                  'Assisted in framework enhancement initiatives to improve automation coverage and reduce manual testing efforts.',
+                  'Generated periodic status reports and communicated testing progress, risks, and quality metrics to project stakeholders.',
+                  'Conducted peer reviews of test artifacts and automation scripts to ensure adherence to quality standards and best practices.',
+                  'Supported production validation activities and post-release testing to ensure successful application deployments.',
+                  'Collaborated with cross-functional teams to ensure timely delivery of high-quality software solutions.',
+                  'Contributed to continuous process improvement initiatives by identifying opportunities to enhance testing efficiency and effectiveness.',
+                  'Mentored junior team members and shared testing knowledge, automation techniques, and best practices.'
                 ]
               },
               {
@@ -366,9 +422,14 @@ function App() {
                 role: 'Software Developer',
                 period: 'Jan 2013 - Dec 2014',
                 description: [
-                  'Involved in the preparation of Test Scenarios',
-                  'Test Cases & Test execution for various levels of testing like Functional and Regression Testing.',
-                  'Develop and Execute,Maintain Automated test scripts',
+                  'nalyzed business requirements and participated in application design discussions to develop scalable and maintainable software solutions.',
+                  'Collaborated with Business Analysts, Project Managers, and Technical Teams to understand functional requirements and implement business solutions.',
+                  'Participated in the complete Software Development Life Cycle (SDLC), including requirement analysis, development, testing, deployment, and maintenance.',
+                  'Designed and implemented reusable modules, components, and utilities to improve application performance and maintainability.',
+                  'Developed and executed unit test cases to ensure application functionality, reliability, and code quality',
+                  'Performed bug fixing, troubleshooting, and root-cause analysis for application issues identified during development and production support.',
+                  'Worked with databases to develop queries, perform data validation, and ensure data integrity across applications.',
+                  'Collaborated closely with QA teams to resolve defects and support functional, integration, and user acceptance testing activities.'
                 ]
               }
             ].map((job, index) => (
