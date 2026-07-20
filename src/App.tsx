@@ -421,7 +421,7 @@ function App() {
                 role: 'Software Developer',
                 period: 'Jan 2013 - Dec 2014',
                 description: [
-                  'nalyzed business requirements and participated in application design discussions to develop scalable and maintainable software solutions.',
+                  'Analyzed business requirements and participated in application design discussions to develop scalable and maintainable software solutions.',
                   'Collaborated with Business Analysts, Project Managers, and Technical Teams to understand functional requirements and implement business solutions.',
                   'Participated in the complete Software Development Life Cycle (SDLC), including requirement analysis, development, testing, deployment, and maintenance.',
                   'Designed and implemented reusable modules, components, and utilities to improve application performance and maintainability.',
