@@ -472,13 +472,13 @@ function App() {
                 projectDescription: 'HSBC Custody handles all corporate action events for investors by identifying and validating announcements, notifying clients, processing mandatory events like dividends and stock splits, and managing client elections for voluntary events such as rights issues or tenders. They use strong global systems and market expertise to ensure accurate, timely, and compliant processing.',
                 Roles: ['Understanding the requirement.',
                   'Identifying test cases for Functional and Automation.',
-                  'Preparing Test scripts for PlayWright, and Python',
-                  'Created framework & functions when needed.',
-                  'Prepating estimation for country wise testing',
+                  'Preparing Test scripts for Playwright with Python',
+                  'Createad framework & functions when needed.',
+                  'Preparing estimation for country wise testing',
                   'Generating files for TCS bancs validation',
                   'Execution of test scripts for cross Browser testing and Devices.',
                   'Report verification and validation.',
-                  'Review of Test Scripts and Execution Scripts',
+                  'Review of Test Scripts and Execution Scripts.',
                   'Reviewing the test reports and preparing the Test summary reports.']
               },
               {
@@ -486,14 +486,14 @@ function App() {
                 description: 'Aladdin target management management platform, scalable portfolio monitoring and rebalancing, and specialized for model portfolio managers',
                 image: 'https://res.cloudinary.com/do3edwdc3/image/upload/v1/br_r4konf',
                 tech: ['Cypress', 'JavaScript', 'BDD', 'Spring boot', 'API Testing', 'Postman', 'GIT'],
-                projectDescription: 'BlackRock Aladdin PM remains the industry leader in portfolio management it amis to deliver persona-centered workflow and hogh scale portfolio management. The platform simplifies complex portfolio management challenges with intuitive user experience and modular building blocks. Aladdin target management management platform, scalable portfolio monitoring and rebalancing, and specialized for model portfolio managers',
+                projectDescription: 'BlackRock Aladdin PM remains the industry leader in portfolio management it aims to deliver persona-centered workflow and hogh scale portfolio management. The platform simplifies complex portfolio management challenges with intuitive user experience and modular building blocks. Aladdin target management management platform, scalable portfolio monitoring and rebalancing, and specialized for model portfolio managers',
                 Roles: ['Understanding the requirement.',
                   'Identifying test cases for Functional and Automation.',
                   'Preparing Test scripts for Cypress, Appium and API Testing',
                   'Updating framework functions when needed.',
                   'Execution of test scripts for cross Browser testing and Devices.',
                   'Report verification and validation.',
-                  'Review of Test Scripts and Execution Scripts',
+                  'Review of Test Scripts and Execution Scripts.',
                   'Reviewing the test reports and preparing the Test summary reports.']
               },
               {
@@ -508,7 +508,7 @@ function App() {
                   'Updating framework functions when needed.',
                   'Execution of test scripts for cross Browser testing and Devices.',
                   'Report verification and validation.',
-                  'Review of Test Scripts and Execution Scripts',
+                  'Review of Test Scripts and Execution Scripts.',
                   'Reviewing the test reports and preparing the Test summary reports.']
               },
               {
@@ -652,7 +652,7 @@ function App() {
                 university: 'Anna University, Tamil Nadu',
                 degree: 'Bachelor of Engineering - Electronics and Communication Engineering',
                 period: '2008-2013',
-                grade: '62.8 CGPA',
+                grade: '6.3 CGPA',
                 description: "As a Electronics and Communication Engineering graduate, I possess strong problem-solving and precision skills. Combining this foundation with my passion for technology, I'm venturing into IT. My college experience has equipped me to bridge the worlds of engineering and IT, applying efficiency and innovation to both realms, making me a versatile and adaptable professional."
               },
               {
