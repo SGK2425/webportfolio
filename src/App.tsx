@@ -332,7 +332,6 @@ function App() {
                   'Led defect triage discussions, root cause analysis sessions, and quality review meetings to ensure timely resolution of critical issues.',
                   'Acted as the primary liaison between clients, business teams, and technology teams, providing regular project status updates and quality reports.',
                   'Mentored QA engineers, automation testers, and newly onboarded team members through coaching, knowledge transfers, and technical training programs.',
-                  'Conducted technical interviews for campus and off-campus hiring initiatives, evaluating candidates and contributing to talent acquisition efforts.',
                   'Facilitated cross-functional collaboration between manual testing, automation, development, DevOps, and business teams to improve delivery efficiency.',
                   'Evaluated emerging technologies, automation tools, and AI-assisted testing solutions to drive innovation and continuous improvement.',
                   'Managed project governance activities, including SOP maintenance, KPI reporting, audit compliance, quality reviews, and process improvements.',
